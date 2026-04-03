@@ -19,7 +19,7 @@ const FooterSection = () => {
             <ul className="space-y-3 font-sans text-sm text-primary-foreground/70">
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4" />
-                (11) 99999-9999
+                (45) 9989-1066
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4" />
