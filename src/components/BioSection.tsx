@@ -28,17 +28,10 @@ const BioSection = () => {
           </h2>
           <div className="space-y-4 text-muted-foreground font-sans leading-relaxed">
             <p>
-              Desde muito cedo, senti o chamado para cuidar das pessoas ao meu redor. Essa paixão me levou a explorar
-              diversas tradições de cura, combinando sabedoria ancestral com abordagens contemporâneas.
+              Muitas vezes, a rotina nos desconecta de quem realmente somos. Na AlinhaMente, acreditamos que o bem-estar não é apenas a ausência de sintomas, mas o alinhamento profundo entre o que você sente, pensa e faz.
             </p>
             <p>
-              Com mais de 10 anos de experiência, minha prática é guiada pela escuta atenta e pelo respeito à
-              individualidade de cada pessoa. Acredito que a verdadeira cura acontece quando nos reconectamos
-              com nossa essência mais profunda.
-            </p>
-            <p>
-              Formada em Naturopatia, com especializações em Aromaterapia, Reiki e Fitoterapia, busco oferecer
-              um cuidado holístico e personalizado para cada jornada de transformação.
+              Minha missão é oferecer um espaço seguro de escuta e acolhimento. Com uma abordagem integrativa, não olhamos apenas para o problema, mas para o ser humano em sua totalidade. Juntos, vamos identificar bloqueios, ressignificar traumas e construir o caminho para uma mente resiliente e um coração em paz.
             </p>
           </div>
         </div>
