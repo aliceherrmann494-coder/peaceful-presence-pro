@@ -7,7 +7,7 @@ const FooterSection = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-serif text-2xl font-semibold mb-4">Terapeuta</h3>
+            <h3 className="font-serif text-2xl font-semibold mb-4">Juliana Corrêa Terapeuta</h3>
             <p className="text-primary-foreground/70 font-sans text-sm leading-relaxed">
               Cuidando de você com amor, ciência e intuição. Agende sua consulta e inicie sua transformação.
             </p>
