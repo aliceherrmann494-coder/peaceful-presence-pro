@@ -50,7 +50,7 @@ const FooterSection = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/50 font-sans">
-          © 2026 Terapeuta. Todos os direitos reservados.
+          © 2026 Juliana Corrêa Terapeuta. Todos os direitos reservados.
         </div>
       </footer>
 
