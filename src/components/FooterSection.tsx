@@ -25,9 +25,9 @@ const FooterSection = () => {
                 <Mail className="w-4 h-4" />
                 contato@terapeuta.com.br
               </li>
-              <li className="flex items-center gap-3">
-                <MapPin className="w-4 h-4" />
-                São Paulo, SP
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                R. Rodrigues Alves, 1391 - Parque São Paulo, Cascavel - PR, 85803-690, Brasil
               </li>
             </ul>
           </div>
