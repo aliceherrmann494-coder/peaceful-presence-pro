@@ -23,7 +23,7 @@ const FooterSection = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4" />
-                contato@terapeuta.com.br
+                julianacorrea.jmc@gmail.com
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
