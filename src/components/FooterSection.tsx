@@ -63,8 +63,50 @@ const FooterSection = () => {
           ></iframe>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/50 font-sans">
-          © 2026 Juliana Corrêa Terapeuta. Todos os direitos reservados.
+        {/* Compliance Google Ads */}
+        <div className="mt-16 pt-8 border-t border-primary-foreground/10">
+          <div className="max-w-6xl mx-auto">
+            {/* Business Info */}
+            <div className="mb-6 text-center">
+              <p className="font-serif text-sm font-semibold text-primary-foreground/80 mb-1">
+                Espaço AlinhaMente Terapias Integradas
+              </p>
+              <p className="text-xs text-primary-foreground/50 font-sans">
+                Responsável: Juliana Corrêa · CNPJ/CPF conforme legislação vigente
+              </p>
+              <p className="text-xs text-primary-foreground/50 font-sans">
+                R. Rodrigues Alves, 1391 - Parque São Paulo, Cascavel - PR, 85803-690, Brasil
+              </p>
+              <p className="text-xs text-primary-foreground/50 font-sans">
+                Telefone: (45) 9989-1066 · E-mail: julianacorrea.jmc@gmail.com
+              </p>
+            </div>
+
+            {/* Policy Links */}
+            <div className="flex flex-wrap justify-center gap-4 mb-6 text-xs font-sans">
+              <a href="#politica-de-privacidade" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+                Política de Privacidade
+              </a>
+              <span className="text-primary-foreground/30">|</span>
+              <a href="#termos-de-uso" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+                Termos de Uso
+              </a>
+              <span className="text-primary-foreground/30">|</span>
+              <a href="#politica-de-cookies" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+                Política de Cookies
+              </a>
+            </div>
+
+            {/* Disclaimer */}
+            <p className="text-center text-[11px] text-primary-foreground/40 font-sans max-w-3xl mx-auto leading-relaxed mb-6">
+              Os serviços oferecidos são de natureza terapêutica complementar e não substituem acompanhamento médico ou psicológico. Os resultados podem variar de pessoa para pessoa. Ao utilizar este site, você concorda com nossa Política de Privacidade e Termos de Uso.
+            </p>
+
+            {/* Copyright */}
+            <div className="text-center text-xs text-primary-foreground/50 font-sans">
+              © {new Date().getFullYear()} Espaço AlinhaMente Terapias Integradas. Todos os direitos reservados.
+            </div>
+          </div>
         </div>
       </footer>
 
