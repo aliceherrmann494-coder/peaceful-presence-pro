@@ -1,36 +1,41 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { Flower2, Wind, Flame, Leaf, Heart, Sparkles } from "lucide-react";
+import { Sparkles, Brain, Users, Target, Ear, Flower2, Flame } from "lucide-react";
 
 const specialties = [
-  {
-    icon: Flower2,
-    title: "Aromaterapia",
-    description: "Uso terapêutico de óleos essenciais para equilibrar emoções, aliviar dores e promover bem-estar.",
-  },
   {
     icon: Sparkles,
     title: "Reiki",
     description: "Canalização de energia vital para restaurar o equilíbrio energético e estimular a autocura.",
   },
   {
-    icon: Leaf,
-    title: "Fitoterapia",
-    description: "Tratamento com plantas medicinais para fortalecer o organismo de forma natural e segura.",
+    icon: Brain,
+    title: "Barras de Access Consciousness",
+    description: "Técnica que libera crenças limitantes e padrões de pensamento, promovendo clareza mental e expansão da consciência.",
   },
   {
-    icon: Wind,
-    title: "Terapia Respiratória",
-    description: "Técnicas de respiração consciente para reduzir ansiedade e expandir a consciência corporal.",
+    icon: Users,
+    title: "Autoconstelação Sistêmica",
+    description: "Ferramenta terapêutica que revela dinâmicas familiares ocultas, promovendo reconciliação e fluxo de amor.",
   },
   {
-    icon: Heart,
-    title: "Terapia Floral",
-    description: "Essências florais que auxiliam no equilíbrio emocional e no desenvolvimento pessoal.",
+    icon: Target,
+    title: "Acupuntura",
+    description: "Estimulação de pontos energéticos com agulhas finas para equilibrar o fluxo de energia e aliviar dores.",
+  },
+  {
+    icon: Ear,
+    title: "Auriculoterapia",
+    description: "Estímulo de pontos na orelha para tratar disfunções físicas e emocionais de forma natural.",
+  },
+  {
+    icon: Flower2,
+    title: "Aromaterapia",
+    description: "Uso terapêutico de óleos essenciais para equilibrar emoções, aliviar dores e promover bem-estar.",
   },
   {
     icon: Flame,
-    title: "Moxabustão",
-    description: "Aplicação de calor em pontos energéticos para estimular a circulação e aliviar dores crônicas.",
+    title: "Terapias Xamânicas Personalizadas",
+    description: "Práticas ancestrais adaptadas à sua jornada pessoal, reconectando você à sabedoria da natureza e ao seu poder interior.",
   },
 ];
 
@@ -44,8 +49,8 @@ const SpecialtiesSection = () => {
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Medicinas & Especialidades
           </h2>
-          <p className="text-muted-foreground font-sans max-w-2xl mx-auto">
-            Cada técnica é aplicada com cuidado e respeito, buscando a harmonia do seu ser como um todo.
+          <p className="text-muted-foreground font-sans max-w-3xl mx-auto">
+            Com respeito à individualidade do corpo e da mente, compreendendo o universo particular de cada ser humano, desenvolvi um serviço personalizado e humano — e assim nasceu o Espaço AlinhaMente Terapias Integradas.
           </p>
         </div>
 
