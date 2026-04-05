@@ -1,4 +1,3 @@
-import { useFadeIn } from "@/hooks/useFadeIn";
 import { Star, Quote } from "lucide-react";
 
 const testimonials = [
@@ -35,11 +34,9 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
-  const ref = useFadeIn();
-
   return (
     <section id="depoimentos" className="py-24 px-6 md:px-16 bg-background">
-      <div ref={ref} className="fade-in-section max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
             Depoimentos
