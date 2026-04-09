@@ -28,11 +28,16 @@ const BioSection = () => {
           </h2>
           <div className="space-y-4 text-muted-foreground font-sans leading-relaxed">
             <p>
-              Muitas vezes, a rotina nos desconecta de quem realmente somos. Na AlinhaMente, acreditamos que o bem-estar não é apenas a ausência de sintomas, mas o alinhamento profundo entre o que você sente, pensa e faz.
+              Na AlinhaMente Terapias Integradas, o nome já entrega nosso propósito: ajudar você a colocar cada parte da sua vida no lugar.
             </p>
             <p>
-              Minha missão é oferecer um espaço seguro de escuta e acolhimento. Com uma abordagem integrativa, não olhamos apenas para o problema, mas para o ser humano em sua totalidade. Juntos, vamos identificar bloqueios, ressignificar traumas e construir o caminho para uma mente resiliente e um coração em paz.
+              Acreditamos que o bem-estar verdadeiro não é sorte, é o resultado do alinhamento entre o seu corpo, sua mente e suas emoções. Com um olhar humano e integrativo, ofereço um espaço seguro para você:
             </p>
+            <ul className="list-disc list-inside space-y-2 ml-2">
+              <li>Restabelecer seu equilíbrio interior;</li>
+              <li>Superar bloqueios que te impedem de avançar;</li>
+              <li>Viver com mais leveza, saúde e clareza mental.</li>
+            </ul>
           </div>
         </div>
       </div>
