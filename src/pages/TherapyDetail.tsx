@@ -62,7 +62,7 @@ const TherapyDetail = () => {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground">
             {therapy.title}
           </h1>
-          <p className="font-sans text-lg md:text-xl text-muted-foreground mt-2 max-w-2xl">
+          <p className="font-sans text-lg md:text-xl text-muted-foreground mt-6 max-w-2xl">
             {therapy.subtitle}
           </p>
         </div>
