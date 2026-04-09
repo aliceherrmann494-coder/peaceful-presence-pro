@@ -38,6 +38,17 @@ const BioSection = () => {
               <li>Superar bloqueios que te impedem de avançar;</li>
               <li>Viver com mais leveza, saúde e clareza mental.</li>
             </ul>
+
+            <h3 className="font-serif text-xl font-semibold text-foreground mt-8 mb-4">
+              O que você pode esperar:
+            </h3>
+            <ul className="space-y-3 ml-2">
+              <li className="flex items-center gap-2"><span className="text-accent">✓</span> Alívio da ansiedade e estresse</li>
+              <li className="flex items-center gap-2"><span className="text-accent">✓</span> Melhora do sono e da disposição</li>
+              <li className="flex items-center gap-2"><span className="text-accent">✓</span> Clareza mental e emocional</li>
+              <li className="flex items-center gap-2"><span className="text-accent">✓</span> Superação de padrões negativos</li>
+              <li className="flex items-center gap-2"><span className="text-accent">✓</span> Reconexão com sua essência</li>
+            </ul>
           </div>
         </div>
       </div>
