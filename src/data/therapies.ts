@@ -20,7 +20,6 @@ export const therapies: TherapyData[] = [
       "Redução do estresse e da ansiedade",
       "Alívio de dores crônicas e tensões musculares",
       "Melhora da qualidade do sono",
-      "Fortalecimento do sistema imunológico",
       "Equilíbrio emocional e clareza mental",
       "Aceleração de processos de recuperação",
     ],
