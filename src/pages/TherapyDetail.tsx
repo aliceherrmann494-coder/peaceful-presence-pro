@@ -46,7 +46,7 @@ const TherapyDetail = () => {
   const heroImage = imageMap[therapy.slug];
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background animate-fade-in">
       {/* Hero */}
       <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <img
