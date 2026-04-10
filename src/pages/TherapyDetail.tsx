@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { therapies } from "@/data/therapies";
 import { ArrowLeft, Clock, CheckCircle2, Heart, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,10 @@ const imageMap: Record<string, string> = {
 
 const TherapyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   const therapy = therapies.find((t) => t.slug === slug);
 
   if (!therapy) {
