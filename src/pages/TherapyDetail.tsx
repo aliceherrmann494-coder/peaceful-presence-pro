@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { therapies } from "@/data/therapies";
 import { ArrowLeft, Clock, CheckCircle2, Heart, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
