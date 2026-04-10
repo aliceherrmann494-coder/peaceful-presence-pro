@@ -1,5 +1,5 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { Sparkles, Brain, Users, Target, Ear, Flower2, Flame } from "lucide-react";
+import { Sparkles, Brain, Users, Ear } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const specialties = [
