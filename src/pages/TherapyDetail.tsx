@@ -55,7 +55,7 @@ const TherapyDetail = () => {
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16">
           <Link
             to="/#terapias"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-sm font-medium text-foreground bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-soft hover:bg-card transition-all mb-4"
           >
             <ArrowLeft className="w-4 h-4" /> Voltar
           </Link>
