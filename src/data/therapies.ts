@@ -69,4 +69,24 @@ export const therapies: TherapyData[] = [
       "Recomendada para quem percebe padrões que se repetem na família (doenças, separações, conflitos financeiros), dificuldades em relacionamentos ou sensação de carregar um peso que não é seu.",
     duration: "60 a 90 minutos",
   },
+  {
+    slug: "auriculoterapia",
+    title: "Acupuntura Auricular",
+    subtitle: "Cura através dos microsistemas da orelha",
+    description:
+      "A Auriculoterapia é uma técnica que estimula pontos específicos no pavilhão auricular (orelha), os quais refletem todo o corpo humano em formato de um feto invertido. Ao estimular esses pontos com sementes de mostarda, agulhas semipermanentes ou esferas metálicas, é possível tratar disfunções físicas e emocionais de forma natural, segura e eficaz.",
+    benefits: [
+      "Controle da dor e inflamação",
+      "Auxílio no tratamento da ansiedade e depressão",
+      "Apoio na perda de peso e compulsão alimentar",
+      "Melhora do sono",
+      "Redução de vícios (tabagismo, entre outros)",
+      "Tratamento de alergias e sinusite",
+    ],
+    howItWorks:
+      "Após a avaliação, a terapeuta identifica os pontos auriculares correspondentes às suas queixas. Pequenas sementes ou esferas são fixadas com micropore em pontos da orelha. Você pode estimulá-los ao longo da semana pressionando levemente. Os pontos permanecem por 5 a 7 dias, potencializando o efeito terapêutico.",
+    whoIsItFor:
+      "Excelente para quem busca uma terapia prática, contínua e complementar. Muito procurada por pessoas com dores, ansiedade, insônia, compulsões e desequilíbrios emocionais.",
+    duration: "30 a 40 minutos",
+  },
 ];
