@@ -1,8 +1,20 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { Sparkles, Brain, Users, Target, Ear, Flower2, Flame } from "lucide-react";
+import { Sparkles, Brain, Users, Ear } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const specialties = [
+  {
+    icon: Ear,
+    title: "Acupuntura Auricular",
+    slug: "auriculoterapia",
+    description: "Estímulo de pontos na orelha para tratar disfunções físicas e emocionais de forma natural.",
+  },
+  {
+    icon: Brain,
+    title: "Barras de Access",
+    slug: "barras-de-access",
+    description: "Técnica que libera crenças limitantes e padrões de pensamento, promovendo clareza mental e expansão da consciência.",
+  },
   {
     icon: Sparkles,
     title: "Reiki",
@@ -10,40 +22,10 @@ const specialties = [
     description: "Canalização de energia vital para restaurar o equilíbrio energético e estimular a autocura.",
   },
   {
-    icon: Brain,
-    title: "Barras de Access Consciousness",
-    slug: "barras-de-access",
-    description: "Técnica que libera crenças limitantes e padrões de pensamento, promovendo clareza mental e expansão da consciência.",
-  },
-  {
     icon: Users,
     title: "Autoconstelação Sistêmica",
     slug: "autoconstelacao-sistemica",
     description: "Ferramenta terapêutica que revela dinâmicas familiares ocultas, promovendo reconciliação e fluxo de amor.",
-  },
-  {
-    icon: Target,
-    title: "Acupuntura",
-    slug: "acupuntura",
-    description: "Estimulação de pontos energéticos com agulhas finas para equilibrar o fluxo de energia e aliviar dores.",
-  },
-  {
-    icon: Ear,
-    title: "Auriculoterapia",
-    slug: "auriculoterapia",
-    description: "Estímulo de pontos na orelha para tratar disfunções físicas e emocionais de forma natural.",
-  },
-  {
-    icon: Flower2,
-    title: "Aromaterapia",
-    slug: "aromaterapia",
-    description: "Uso terapêutico de óleos essenciais para equilibrar emoções, aliviar dores e promover bem-estar.",
-  },
-  {
-    icon: Flame,
-    title: "Terapias Xamânicas Personalizadas",
-    slug: "terapias-xamanicas",
-    description: "Práticas ancestrais adaptadas à sua jornada pessoal, reconectando você à sabedoria da natureza e ao seu poder interior.",
   },
 ];
 
