@@ -24,6 +24,10 @@ const imageMap: Record<string, string> = {
 
 const TherapyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   const therapy = therapies.find((t) => t.slug === slug);
 
   if (!therapy) {
