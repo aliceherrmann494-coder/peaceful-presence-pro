@@ -1,5 +1,4 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { ShoppingBag } from "lucide-react";
 import { products } from "@/data/products";
 
 const ProductsSection = () => {
@@ -26,23 +25,34 @@ const ProductsSection = () => {
             return (
               <div
                 key={product.slug}
-                className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group flex flex-col"
+                className="bg-card rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group flex flex-col overflow-hidden"
               >
-                <ShoppingBag className="w-8 h-8 text-accent mb-5" strokeWidth={1.5} />
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-muted-foreground font-sans text-sm leading-relaxed flex-1">
-                  {product.description}
-                </p>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-4 text-accent font-sans text-sm font-medium"
-                >
-                  Saiba mais →
-                </a>
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    loading="lazy"
+                    width={768}
+                    height={768}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-8 flex flex-col flex-1">
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
+                    {product.name}
+                  </h3>
+                  <p className="text-muted-foreground font-sans text-sm leading-relaxed flex-1">
+                    {product.description}
+                  </p>
+                  <a
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 text-accent font-sans text-sm font-medium"
+                  >
+                    Saiba mais →
+                  </a>
+                </div>
               </div>
             );
           })}
