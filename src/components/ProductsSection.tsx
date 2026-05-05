@@ -1,5 +1,4 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { ShoppingBag } from "lucide-react";
 import { products } from "@/data/products";
 
 const ProductsSection = () => {
