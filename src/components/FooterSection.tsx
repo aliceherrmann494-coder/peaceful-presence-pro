@@ -27,7 +27,7 @@ const FooterSection = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                R. Rodrigues Alves, 1391 - Parque São Paulo, Cascavel - PR, 85803-690, Brasil
+                R. Rodrigues Alves, 1450 - Maria Luíza, Cascavel - PR, 85803-690, Brasil
               </li>
             </ul>
           </div>
