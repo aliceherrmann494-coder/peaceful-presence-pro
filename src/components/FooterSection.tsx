@@ -27,7 +27,7 @@ const FooterSection = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                R. Rodrigues Alves, 1391 - Parque São Paulo, Cascavel - PR, 85803-690, Brasil
+                R. Rodrigues Alves, 1450 - Maria Luíza, Cascavel - PR, 85803-690, Brasil
               </li>
             </ul>
           </div>
@@ -52,7 +52,7 @@ const FooterSection = () => {
         {/* Google Maps */}
         <div className="mt-12 rounded-xl overflow-hidden shadow-card">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.0!2d-53.455!3d-24.955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.+Rodrigues+Alves%2C+1391+-+Parque+S%C3%A3o+Paulo%2C+Cascavel+-+PR%2C+85803-690!5e0!3m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps?q=R.+Rodrigues+Alves,+1450+-+Maria+Lu%C3%ADza,+Cascavel+-+PR,+85803-690&output=embed"
             width="100%"
             height="300"
             style={{ border: 0 }}
@@ -75,7 +75,7 @@ const FooterSection = () => {
                 Responsável: Juliana Corrêa · CNPJ/CPF conforme legislação vigente
               </p>
               <p className="text-xs text-primary-foreground/50 font-sans">
-                R. Rodrigues Alves, 1391 - Parque São Paulo, Cascavel - PR, 85803-690, Brasil
+                R. Rodrigues Alves, 1450 - Maria Luíza, Cascavel - PR, 85803-690, Brasil
               </p>
               <p className="text-xs text-primary-foreground/50 font-sans">
                 Telefone: (45) 9989-1066 · E-mail: julianacorrea.jmc@gmail.com
