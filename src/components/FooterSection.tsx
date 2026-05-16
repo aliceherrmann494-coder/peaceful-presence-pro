@@ -75,7 +75,7 @@ const FooterSection = () => {
                 Responsável: Juliana Corrêa · CNPJ/CPF conforme legislação vigente
               </p>
               <p className="text-xs text-primary-foreground/50 font-sans">
-                R. Rodrigues Alves, 1391 - Parque São Paulo, Cascavel - PR, 85803-690, Brasil
+                R. Rodrigues Alves, 1450 - Maria Luíza, Cascavel - PR, 85803-690, Brasil
               </p>
               <p className="text-xs text-primary-foreground/50 font-sans">
                 Telefone: (45) 9989-1066 · E-mail: julianacorrea.jmc@gmail.com
