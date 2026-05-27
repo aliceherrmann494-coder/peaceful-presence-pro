@@ -36,7 +36,7 @@ const FooterSection = () => {
           <div>
             <h4 className="font-serif text-lg font-semibold mb-4">Redes Sociais</h4>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/terapias.jumcorrea?igsh=MWc5aXJ6aWgzOG5ieQ%3D%3D" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition-colors" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/10 transition-colors" aria-label="Facebook">
