@@ -12,11 +12,11 @@ const BioSection = () => {
           <div className="rounded-2xl overflow-hidden shadow-card">
             <img
               src={portraitImg}
-              alt="Foto da terapeuta"
-              className="w-full h-auto object-cover aspect-[3/4]"
+              alt="Juliana Corrêa - Terapeuta"
+              className="w-full h-auto object-cover aspect-square"
               loading="lazy"
-              width={640}
-              height={896}
+              width={800}
+              height={800}
             />
           </div>
         </div>
