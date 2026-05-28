@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   return (
@@ -87,18 +88,19 @@ const FooterSection = () => {
               <a href="#politica-de-privacidade" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
                 Política de Privacidade
               </a>
+            <div className="flex flex-wrap justify-center gap-4 mb-6 text-xs font-sans">
+              <Link to="/politica-de-privacidade" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+                Política de Privacidade
+              </Link>
               <span className="text-primary-foreground/30">|</span>
-              <a href="#termos-de-uso" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+              <Link to="/termos-de-uso" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
                 Termos de Uso
-              </a>
+              </Link>
               <span className="text-primary-foreground/30">|</span>
-              <a href="#politica-de-cookies" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+              <Link to="/politica-de-cookies" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
                 Política de Cookies
-              </a>
+              </Link>
             </div>
-
-            {/* Disclaimer */}
-            <p className="text-center text-[11px] text-primary-foreground/40 font-sans max-w-3xl mx-auto leading-relaxed mb-6">
               Os serviços oferecidos são de natureza terapêutica complementar e não substituem acompanhamento médico ou psicológico. Os resultados podem variar de pessoa para pessoa. Ao utilizar este site, você concorda com nossa Política de Privacidade e Termos de Uso.
             </p>
 
