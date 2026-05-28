@@ -85,10 +85,6 @@ const FooterSection = () => {
 
             {/* Policy Links */}
             <div className="flex flex-wrap justify-center gap-4 mb-6 text-xs font-sans">
-              <a href="#politica-de-privacidade" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
-                Política de Privacidade
-              </a>
-            <div className="flex flex-wrap justify-center gap-4 mb-6 text-xs font-sans">
               <Link to="/politica-de-privacidade" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
                 Política de Privacidade
               </Link>
@@ -101,6 +97,9 @@ const FooterSection = () => {
                 Política de Cookies
               </Link>
             </div>
+
+            {/* Disclaimer */}
+            <p className="text-center text-[11px] text-primary-foreground/40 font-sans max-w-3xl mx-auto leading-relaxed mb-6">
               Os serviços oferecidos são de natureza terapêutica complementar e não substituem acompanhamento médico ou psicológico. Os resultados podem variar de pessoa para pessoa. Ao utilizar este site, você concorda com nossa Política de Privacidade e Termos de Uso.
             </p>
 
