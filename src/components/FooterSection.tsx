@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   return (
@@ -84,17 +85,17 @@ const FooterSection = () => {
 
             {/* Policy Links */}
             <div className="flex flex-wrap justify-center gap-4 mb-6 text-xs font-sans">
-              <a href="#politica-de-privacidade" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+              <Link to="/politica-de-privacidade" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
                 Política de Privacidade
-              </a>
+              </Link>
               <span className="text-primary-foreground/30">|</span>
-              <a href="#termos-de-uso" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+              <Link to="/termos-de-uso" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
                 Termos de Uso
-              </a>
+              </Link>
               <span className="text-primary-foreground/30">|</span>
-              <a href="#politica-de-cookies" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
+              <Link to="/politica-de-cookies" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors underline underline-offset-2">
                 Política de Cookies
-              </a>
+              </Link>
             </div>
 
             {/* Disclaimer */}
