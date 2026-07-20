@@ -1,6 +1,8 @@
 import productSoap from "@/assets/product-soap.jpg";
-import productBathSalts from "@/assets/sais-de-banho.png.asset.json";
+import productBathSaltsAsset from "@/assets/sais-de-banho.png.asset.json";
 import productIncense from "@/assets/product-incense.jpg";
+
+const productBathSalts = productBathSaltsAsset.url;
 
 export interface Product {
   name: string;
