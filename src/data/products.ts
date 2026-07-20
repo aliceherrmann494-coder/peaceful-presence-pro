@@ -1,5 +1,5 @@
 import productSoap from "@/assets/product-soap.jpg";
-import productBathSalts from "@/assets/product-bathsalts.jpg";
+import productBathSalts from "@/assets/sais-de-banho.png.asset.json";
 import productIncense from "@/assets/product-incense.jpg";
 
 export interface Product {
