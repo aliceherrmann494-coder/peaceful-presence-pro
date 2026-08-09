@@ -21,6 +21,7 @@ const imageMap: Record<string, string> = {
   auriculoterapia: auriculoterapiaImg,
   aromaterapia: aromaterapiaImg,
   "terapias-xamanicas": xamanicaImg,
+  "terapia-do-cacau": cacauImg,
 };
 
 const TherapyDetail = () => {

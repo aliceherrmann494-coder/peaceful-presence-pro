@@ -27,6 +27,12 @@ const specialties = [
     slug: "autoconstelacao-sistemica",
     description: "Ferramenta terapêutica que revela dinâmicas familiares ocultas, promovendo reconciliação e fluxo de amor.",
   },
+  {
+    icon: Coffee,
+    title: "Terapia do Cacau",
+    slug: "terapia-do-cacau",
+    description: "Cacau medicinal em abordagem terapêutica e cerimonial para abertura do coração, alívio emocional e autocuidado.",
+  },
 ];
 
 const SpecialtiesSection = () => {
