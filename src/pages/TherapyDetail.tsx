@@ -11,6 +11,7 @@ import acupunturaImg from "@/assets/therapy-acupuntura.jpg";
 import auriculoterapiaImg from "@/assets/therapy-auriculoterapia.jpg";
 import aromaterapiaImg from "@/assets/therapy-aromaterapia.jpg";
 import xamanicaImg from "@/assets/therapy-xamanica.jpg";
+import cacauImg from "@/assets/therapy-cacau.jpg";
 
 const imageMap: Record<string, string> = {
   reiki: reikiImg,
@@ -20,6 +21,7 @@ const imageMap: Record<string, string> = {
   auriculoterapia: auriculoterapiaImg,
   aromaterapia: aromaterapiaImg,
   "terapias-xamanicas": xamanicaImg,
+  "terapia-do-cacau": cacauImg,
 };
 
 const TherapyDetail = () => {

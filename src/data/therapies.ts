@@ -89,4 +89,24 @@ export const therapies: TherapyData[] = [
       "Excelente para quem busca uma terapia prática, contínua e complementar. Muito procurada por pessoas com dores, ansiedade, insônia, compulsões e desequilíbrios emocionais.",
     duration: "30 a 40 minutos",
   },
+  {
+    slug: "terapia-do-cacau",
+    title: "Terapia do Cacau",
+    subtitle: "Abra o coração e reconecte-se com sua essência",
+    description:
+      "A Terapia do Cacau utiliza o cacau medicinal em uma abordagem terapêutica e cerimonial que favorece a abertura do coração, o alívio emocional e a reconexão com a própria essência. Rico em compostos que estimulam a sensação de bem-estar, o cacau atua como um aliado suave para quem deseja acolher emoções, liberar tensões e cultivar mais amor-próprio e presença no dia a dia.",
+    benefits: [
+      "Abertura do coração e maior conexão emocional",
+      "Alívio de tensões, ansiedade e sobrecarga mental",
+      "Estímulo à sensação de bem-estar e alegria",
+      "Fortalecimento do amor-próprio e autocuidado",
+      "Aprofundamento da presença e da introspecção",
+      "Complemento natural em processos terapêuticos",
+    ],
+    howItWorks:
+      "A sessão começa com a preparação e o consumo consciente do cacau medicinal, em um ambiente acolhedor e seguro. Em seguida, conduzimos práticas de respiração, meditação ou conversa terapêutica — de acordo com a necessidade do momento — para que o cacau potencialize a abertura emocional e o autoconhecimento.",
+    whoIsItFor:
+      "Indicada para quem busca acolhimento emocional, deseja trabalhar bloqueios do coração, vive momentos de ansiedade ou tristeza, ou simplesmente quer uma experiência terapêutica profunda e reconfortante.",
+    duration: "60 a 90 minutos",
+  },
 ];

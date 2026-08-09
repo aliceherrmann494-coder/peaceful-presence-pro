@@ -1,5 +1,5 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { Sparkles, Brain, Users, Ear } from "lucide-react";
+import { Sparkles, Brain, Users, Ear, Coffee } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const specialties = [
@@ -26,6 +26,12 @@ const specialties = [
     title: "Autoconstelação Sistêmica",
     slug: "autoconstelacao-sistemica",
     description: "Ferramenta terapêutica que revela dinâmicas familiares ocultas, promovendo reconciliação e fluxo de amor.",
+  },
+  {
+    icon: Coffee,
+    title: "Terapia do Cacau",
+    slug: "terapia-do-cacau",
+    description: "Cacau medicinal em abordagem terapêutica e cerimonial para abertura do coração, alívio emocional e autocuidado.",
   },
 ];
 
