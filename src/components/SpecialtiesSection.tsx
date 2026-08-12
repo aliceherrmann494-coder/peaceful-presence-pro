@@ -10,7 +10,7 @@ const specialties = [
     description: "Estímulo de pontos na orelha para tratar disfunções físicas e emocionais de forma natural.",
   },
   {
-    icon: Brain,
+    icon: BrainCircuit,
     title: "Barras de Access",
     slug: "barras-de-access",
     description: "Técnica que libera crenças limitantes e padrões de pensamento, promovendo clareza mental e expansão da consciência.",
