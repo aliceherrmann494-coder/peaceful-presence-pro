@@ -1,6 +1,7 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { Ear, BrainCircuit, HandHeart, Network, Flower2 } from "lucide-react";
+import { Ear, BrainCircuit, HandHeart, Network } from "lucide-react";
 import { Link } from "react-router-dom";
+import cacauIcon from "@/assets/icone-cacau.jpg.asset.json";
 
 const specialties = [
   {
@@ -28,7 +29,7 @@ const specialties = [
     description: "Ferramenta terapêutica que revela dinâmicas familiares ocultas, promovendo reconciliação e fluxo de amor.",
   },
   {
-    icon: Flower2,
+    image: cacauIcon.url,
     title: "Terapia do Cacau",
     slug: "terapia-do-cacau",
     description: "Cacau medicinal em abordagem terapêutica e cerimonial para abertura do coração, alívio emocional e autocuidado.",
@@ -51,13 +52,17 @@ const SpecialtiesSection = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {specialties.map((item) => (
+          {specialties.map((item: any) => (
             <Link
               to={`/terapia/${item.slug}`}
               key={item.title}
               className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group"
             >
-              <item.icon className="w-8 h-8 text-accent mb-5" strokeWidth={1.5} />
+              {item.image ? (
+                <img src={item.image} alt="Ícone da Terapia do Cacau" className="w-8 h-8 object-contain mb-5" loading="lazy" />
+              ) : (
+                <item.icon className="w-8 h-8 text-accent mb-5" strokeWidth={1.5} />
+              )}
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">{item.title}</h3>
               <p className="text-muted-foreground font-sans text-sm leading-relaxed">{item.description}</p>
               <span className="inline-block mt-4 text-accent font-sans text-sm font-medium">Saiba mais →</span>
