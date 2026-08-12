@@ -22,7 +22,7 @@ const specialties = [
     description: "Canalização de energia vital para restaurar o equilíbrio energético e estimular a autocura.",
   },
   {
-    icon: Users,
+    icon: Network,
     title: "Autoconstelação Sistêmica",
     slug: "autoconstelacao-sistemica",
     description: "Ferramenta terapêutica que revela dinâmicas familiares ocultas, promovendo reconciliação e fluxo de amor.",
