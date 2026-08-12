@@ -1,7 +1,7 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { Ear, BrainCircuit, HandHeart, Network } from "lucide-react";
 import { Link } from "react-router-dom";
-import cacauIcon from "@/assets/icone-cacau.jpg.asset.json";
+import cacauIcon from "@/assets/icone-cacau.png.asset.json";
 
 const specialties = [
   {
