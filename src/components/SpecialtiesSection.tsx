@@ -16,7 +16,7 @@ const specialties = [
     description: "Técnica que libera crenças limitantes e padrões de pensamento, promovendo clareza mental e expansão da consciência.",
   },
   {
-    icon: Sparkles,
+    icon: HandHeart,
     title: "Reiki",
     slug: "reiki",
     description: "Canalização de energia vital para restaurar o equilíbrio energético e estimular a autocura.",
