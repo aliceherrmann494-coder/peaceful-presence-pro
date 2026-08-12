@@ -1,5 +1,5 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { Sparkles, Brain, Users, Ear, Coffee } from "lucide-react";
+import { Ear, BrainCircuit, HandHeart, Network, Flower2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const specialties = [
@@ -10,25 +10,25 @@ const specialties = [
     description: "Estímulo de pontos na orelha para tratar disfunções físicas e emocionais de forma natural.",
   },
   {
-    icon: Brain,
+    icon: BrainCircuit,
     title: "Barras de Access",
     slug: "barras-de-access",
     description: "Técnica que libera crenças limitantes e padrões de pensamento, promovendo clareza mental e expansão da consciência.",
   },
   {
-    icon: Sparkles,
+    icon: HandHeart,
     title: "Reiki",
     slug: "reiki",
     description: "Canalização de energia vital para restaurar o equilíbrio energético e estimular a autocura.",
   },
   {
-    icon: Users,
+    icon: Network,
     title: "Autoconstelação Sistêmica",
     slug: "autoconstelacao-sistemica",
     description: "Ferramenta terapêutica que revela dinâmicas familiares ocultas, promovendo reconciliação e fluxo de amor.",
   },
   {
-    icon: Coffee,
+    icon: Flower2,
     title: "Terapia do Cacau",
     slug: "terapia-do-cacau",
     description: "Cacau medicinal em abordagem terapêutica e cerimonial para abertura do coração, alívio emocional e autocuidado.",
