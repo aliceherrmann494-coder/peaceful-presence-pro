@@ -60,7 +60,7 @@ const SpecialtiesSection = () => {
               className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group"
             >
               {item.image ? (
-                <img src={item.image} alt="Ícone da Terapia do Cacau" className="w-12 h-12 object-contain mb-4" loading="lazy" />
+                <img src={item.image} alt={`Ícone de ${item.title}`} className="w-12 h-12 object-contain mb-4" loading="lazy" />
               ) : (
                 <item.icon className="w-8 h-8 text-accent mb-5" strokeWidth={1.5} />
               )}
