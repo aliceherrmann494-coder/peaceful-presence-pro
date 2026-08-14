@@ -63,7 +63,7 @@ const ProductsSection = () => {
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   <span
-                    className={`absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] md:text-xs font-sans font-medium ${tagToneClasses[product.tagTone]}`}
+                    className={`absolute top-2 left-2 md:top-3 md:left-3 px-2.5 py-1 md:px-3 rounded-full text-[10px] md:text-xs font-sans font-medium leading-tight max-w-[calc(100%-1rem)] ${tagToneClasses[product.tagTone]}`}
                   >
                     {product.tag}
                   </span>
