@@ -155,7 +155,7 @@ const SaisDeBanho = () => {
             <ArrowLeft className="w-4 h-4" /> Voltar aos produtos
           </Link>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-start mt-8 md:mt-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start mt-8 md:mt-10">
             {/* Galeria */}
             <div className="flex flex-col gap-4">
               <div className="rounded-3xl overflow-hidden shadow-sais border border-sais-sand">
@@ -317,7 +317,7 @@ const SaisDeBanho = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
             {useModes.map((mode) => (
               <article
                 key={mode.title}
@@ -384,7 +384,7 @@ const SaisDeBanho = () => {
       {/* Seção 5 — Sugestão de presente */}
       <section className="bg-sais-sand/50 py-14 md:py-24">
         <div className="max-w-4xl mx-auto px-5 sm:px-6 md:px-12">
-          <article className="bg-sais-cream rounded-3xl p-8 md:p-12 border border-sais-sand shadow-sais grid md:grid-cols-[1fr_1.2fr] gap-8 items-center">
+          <article className="bg-sais-cream rounded-3xl p-8 md:p-12 border border-sais-sand shadow-sais grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-8 items-center">
             <img
               src={saisEscalda}
               alt="Ritual de escalda-pés com sais de banho terapêuticos em bacia de madeira"

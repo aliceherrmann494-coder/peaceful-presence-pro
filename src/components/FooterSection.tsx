@@ -5,7 +5,7 @@ const FooterSection = () => {
   return (
     <>
       <footer id="contato" className="bg-primary text-primary-foreground py-20 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
             <h3 className="font-serif text-2xl font-semibold mb-4">Juliana Corrêa Terapeuta</h3>

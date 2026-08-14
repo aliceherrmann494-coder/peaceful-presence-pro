@@ -217,7 +217,7 @@ const SpraysTerapeuticos = () => {
             <ArrowLeft className="w-4 h-4" /> Voltar aos produtos
           </Link>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-start mt-8 md:mt-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start mt-8 md:mt-10">
             {/* Galeria */}
             <div className="flex flex-col gap-4">
               <div className="rounded-3xl overflow-hidden shadow-sais border border-sais-sand">
@@ -389,7 +389,7 @@ const SpraysTerapeuticos = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
             <div className="bg-sais-cream rounded-3xl p-6 md:p-8 border border-sais-sand">
               <h3 className="font-serif text-xl md:text-2xl font-semibold text-sais">
                 No Corpo e na Mente
@@ -447,7 +447,7 @@ const SpraysTerapeuticos = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
             {variantCards.map(({ icon: Icon, name, label, accent, ring, rows }) => (
               <article
                 key={name}
@@ -488,7 +488,7 @@ const SpraysTerapeuticos = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
             {ritual.map(({ step, icon: Icon, title, text }) => (
               <article
                 key={step}
@@ -511,7 +511,7 @@ const SpraysTerapeuticos = () => {
       {/* Seção 5 — Kit duplo & presente */}
       <section className="py-14 md:py-24" style={{ background: "var(--gradient-sais)" }}>
         <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-12">
-          <div className="grid md:grid-cols-[1.1fr_1fr] gap-8 md:gap-10 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-8 md:gap-10 items-center">
             <div>
               <span className="inline-block rounded-full bg-sais-cream/15 border border-sais-cream/25 px-4 py-1.5 font-sans text-xs tracking-[0.18em] uppercase text-sais-cream">
                 Mais vendido

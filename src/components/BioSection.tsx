@@ -8,7 +8,7 @@ const BioSection = () => {
 
   return (
     <section id="sobre" className="py-24 px-6 md:px-16">
-      <div ref={ref} className="fade-in-section max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+      <div ref={ref} className="fade-in-section max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         {/* Photo */}
         <div className="relative">
           <div className="rounded-2xl overflow-hidden shadow-card">

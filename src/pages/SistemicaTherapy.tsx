@@ -146,7 +146,7 @@ const SistemicaTherapy = () => {
             <ArrowLeft className="w-4 h-4" /> Voltar às terapias
           </Link>
 
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center mt-8 md:mt-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center mt-8 md:mt-10">
             <div>
               <span className="inline-block font-sans text-xs md:text-sm tracking-[0.22em] uppercase text-sistemica-gold mb-4">
                 Espaço AlinhaMente · Cascavel - PR
@@ -235,7 +235,7 @@ const SistemicaTherapy = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
             {howItWorks.map(({ icon: Icon, title, text }) => (
               <article
                 key={title}

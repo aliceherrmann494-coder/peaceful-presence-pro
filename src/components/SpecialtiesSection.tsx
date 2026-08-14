@@ -1,12 +1,12 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { BrainCircuit, HandHeart, Network } from "lucide-react";
 import { Link } from "react-router-dom";
-import cacauIcon from "@/assets/icone-cacau.png.asset.json";
-import auricularIcon from "@/assets/icone-auricular.png.asset.json";
+import cacauIcon from "@/assets/icone-cacau.png";
+import auricularIcon from "@/assets/icone-auricular.png";
 
 const specialties = [
   {
-    image: auricularIcon.url,
+    image: auricularIcon,
     title: "Acupuntura Auricular",
     slug: "auriculoterapia",
     description: "Estímulo de pontos na orelha para tratar disfunções físicas e emocionais de forma natural.",
@@ -30,7 +30,7 @@ const specialties = [
     description: "Ferramenta terapêutica que revela dinâmicas familiares ocultas, promovendo reconciliação e fluxo de amor.",
   },
   {
-    image: cacauIcon.url,
+    image: cacauIcon,
     title: "Terapia do Cacau",
     slug: "terapia-do-cacau",
     description: "Cacau medicinal em abordagem terapêutica e cerimonial para abertura do coração, alívio emocional e autocuidado.",
