@@ -51,7 +51,7 @@ export const products: Product[] = [
     shortDescription:
       "Sinergia fitoenergética para alinhar emoções e blindar o ambiente.",
     image: productSprays,
-    tag: "Mais Vendido 🔥",
+    tag: "Mais Vendido",
     tagTone: "destaque",
     highlights: [
       "Foco mental e alívio do estresse",
