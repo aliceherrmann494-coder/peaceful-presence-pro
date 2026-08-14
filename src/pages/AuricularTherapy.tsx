@@ -23,7 +23,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import auricularImg from "@/assets/therapy-auriculoterapia.jpg";
-import auricularIcon from "@/assets/icone-auricular.png.asset.json";
+import auricularIcon from "@/assets/icone-auricular.png";
 
 const WHATSAPP_URL =
   "https://wa.me/554599891066?text=Ol%C3%A1%2C%20Juliana!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Acupuntura%20Auricular.";
@@ -188,7 +188,7 @@ const AuricularTherapy = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-cacao/85 via-cacao/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center gap-4">
                   <img
-                    src={auricularIcon.url}
+                    src={auricularIcon}
                     alt=""
                     aria-hidden="true"
                     className="w-12 h-12 object-contain shrink-0"
@@ -208,7 +208,7 @@ const AuricularTherapy = () => {
       <section className="bg-cacao-cream py-14 md:py-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-6 md:px-12 text-center">
           <img
-            src={auricularIcon.url}
+            src={auricularIcon}
             alt=""
             aria-hidden="true"
             className="w-14 h-14 mx-auto mb-6 object-contain"
