@@ -106,12 +106,11 @@ const useModes = [
 ];
 
 const ingredients = [
-  "Sal Marinho Mineralizado",
-  "Bicarbonato de Sódio",
-  "Camomila desidratada",
-  "Pimenta-Menta desidratada",
-  "Pétalas de Flores",
-  "Óleos Essenciais Terapêuticos",
+  { name: "Sal Marinho Mineralizado", note: "Rico em micronutrientes que reponham minerais pela pele" },
+  { name: "Bicarbonato de Sódio", note: "Equilibra o pH da pele e potencializa a desintoxicação" },
+  { name: "Flores de Camomila Desidratadas", note: "Calmante natural de ação anti-inflamatória" },
+  { name: "Ervas Aromáticas", note: "Hortelã-Pimenta e pétalas com ação tonificante e relaxante" },
+  { name: "Óleos Essenciais Terapêuticos", note: "Puros, atuam no sistema límbico para reduzir o estresse" },
 ];
 
 const SIZE_LABEL = "Pote 150g";
