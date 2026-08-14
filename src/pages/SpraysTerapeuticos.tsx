@@ -19,7 +19,7 @@ import {
   FlaskConical,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import spraysDuo from "@/assets/sprays-duo.jpg";
+import spraysDuo from "@/assets/sprays-duo-real.jpg";
 import spraysRotulo from "@/assets/sprays-rotulo.jpg";
 import spraysBorrifo from "@/assets/sprays-borrifo.jpg";
 
@@ -556,7 +556,7 @@ const SpraysTerapeuticos = () => {
               loading="lazy"
               width={1024}
               height={1024}
-              className="w-full aspect-[4/3] object-contain bg-white/60 rounded-3xl shadow-sais"
+              className="w-full aspect-square object-contain bg-white/60 rounded-3xl shadow-sais"
             />
           </div>
         </div>

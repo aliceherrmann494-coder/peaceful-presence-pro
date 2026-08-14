@@ -389,7 +389,7 @@ const SaisDeBanho = () => {
               src={saisEscalda}
               alt="Ritual de escalda-pés com sais de banho terapêuticos em bacia de madeira"
               loading="lazy"
-              className="w-full aspect-[4/3] object-contain bg-white/60 rounded-2xl shadow-sais"
+              className="w-full aspect-square object-contain bg-white/60 rounded-2xl shadow-sais"
             />
 
             <div>
