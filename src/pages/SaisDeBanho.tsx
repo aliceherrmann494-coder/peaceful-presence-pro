@@ -342,7 +342,7 @@ const SaisDeBanho = () => {
                 ou lembrança corporativa de bem-estar. Um presente que cuida, relaxa e demonstra
                 carinho de forma genuína.
               </p>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+              <a href={giftUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
                 <Button
                   size="lg"
                   variant="outline"
@@ -372,7 +372,7 @@ const SaisDeBanho = () => {
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={orderUrl} target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 className="w-full sm:w-auto bg-sais hover:bg-sais/90 text-sais-cream font-sans font-medium px-8 py-6 text-base rounded-full shadow-sais"
@@ -397,7 +397,7 @@ const SaisDeBanho = () => {
 
       {/* Botão flutuante do WhatsApp */}
       <a
-        href={WHATSAPP_URL}
+        href={orderUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"
