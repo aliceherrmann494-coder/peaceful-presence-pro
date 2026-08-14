@@ -226,7 +226,7 @@ const SpraysTerapeuticos = () => {
                   alt={galleryImages[activeImg].alt}
                   width={1024}
                   height={1024}
-                  className="w-full aspect-square object-cover"
+                  className="w-full aspect-square object-contain bg-white/60"
                 />
               </div>
               <div className="grid grid-cols-3 gap-3">
@@ -247,7 +247,7 @@ const SpraysTerapeuticos = () => {
                       loading="lazy"
                       width={1024}
                       height={1024}
-                      className="w-full aspect-square object-cover"
+                      className="w-full aspect-square object-contain bg-white/60"
                     />
                   </button>
                 ))}
@@ -556,7 +556,7 @@ const SpraysTerapeuticos = () => {
               loading="lazy"
               width={1024}
               height={1024}
-              className="w-full h-64 md:h-80 object-cover rounded-3xl shadow-sais"
+              className="w-full aspect-[4/3] object-contain bg-white/60 rounded-3xl shadow-sais"
             />
           </div>
         </div>
