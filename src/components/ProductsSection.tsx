@@ -28,14 +28,15 @@ const ProductsSection = () => {
                 key={product.slug}
                 className="bg-card rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group flex flex-col overflow-hidden"
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden bg-muted/50 flex items-center justify-center p-6 sm:p-8">
                   <img
                     src={product.image}
                     alt={product.name}
-                    loading="lazy"
+                    loading="eager"
+                    decoding="async"
                     width={768}
                     height={768}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-8 flex flex-col flex-1">
