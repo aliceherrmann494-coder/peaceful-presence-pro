@@ -81,6 +81,10 @@ export default {
         cacao: "var(--shadow-cacao)",
       },
       keyframes: {
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -91,6 +95,7 @@ export default {
         },
       },
       animation: {
+        "fade-in": "fade-in 0.6s ease-out both",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
