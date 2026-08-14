@@ -229,15 +229,74 @@ const SaisDeBanho = () => {
                   Encomenda personalizada com a terapeuta Juliana Corrêa.
                 </p>
 
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="block mt-5">
+                {/* Tamanho */}
+                <div className="mt-6">
+                  <p className="font-sans text-sm font-medium text-sais mb-3">
+                    Escolha o tamanho
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    {sizeOptions.map((opt) => (
+                      <button
+                        key={opt.id}
+                        type="button"
+                        onClick={() => setSize(opt.id)}
+                        aria-pressed={size === opt.id}
+                        className={`text-left rounded-xl border px-4 py-3 transition-colors ${
+                          size === opt.id
+                            ? "border-sais bg-sais/5"
+                            : "border-sais-sand hover:border-sais/40"
+                        }`}
+                      >
+                        <span className="block font-sans text-sm font-medium text-sais">
+                          {opt.label}
+                        </span>
+                        <span className="block font-sans text-xs text-sais/60 mt-0.5">
+                          {opt.note}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Quantidade */}
+                <div className="mt-5 flex items-center justify-between gap-4">
+                  <p className="font-sans text-sm font-medium text-sais">Quantidade</p>
+                  <div className="flex items-center gap-1 rounded-full border border-sais-sand bg-white/70 p-1">
+                    <button
+                      type="button"
+                      onClick={() => setQty((q) => Math.max(1, q - 1))}
+                      aria-label="Diminuir quantidade"
+                      className="w-9 h-9 rounded-full flex items-center justify-center text-sais hover:bg-sais/10 transition-colors"
+                    >
+                      <Minus className="w-4 h-4" />
+                    </button>
+                    <span
+                      aria-live="polite"
+                      className="min-w-8 text-center font-sans text-sm font-semibold text-sais"
+                    >
+                      {qty}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setQty((q) => Math.min(20, q + 1))}
+                      aria-label="Aumentar quantidade"
+                      className="w-9 h-9 rounded-full flex items-center justify-center text-sais hover:bg-sais/10 transition-colors"
+                    >
+                      <Plus className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+
+                <a href={orderUrl} target="_blank" rel="noopener noreferrer" className="block mt-5">
                   <Button
                     size="lg"
                     className="w-full bg-sais hover:bg-sais/90 text-sais-cream font-sans font-medium px-8 py-6 text-base rounded-full shadow-sais"
                   >
                     <WhatsAppIcon className="w-5 h-5 mr-2" />
-                    Comprar / Encomendar pelo WhatsApp
+                    Encomendar {selectedSize.label} pelo WhatsApp
                   </Button>
                 </a>
+
               </div>
 
               <p className="font-sans text-xs text-sais/55 mt-4 flex items-center gap-2">
