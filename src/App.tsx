@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+const CacauTherapy = lazy(() => import("./pages/CacauTherapy.tsx"));
 const TherapyDetail = lazy(() => import("./pages/TherapyDetail.tsx"));
 const IntegratedTherapies = lazy(() => import("./pages/IntegratedTherapies.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
@@ -25,6 +26,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/terapias-integradas" element={<IntegratedTherapies />} />
+            <Route path="/terapia/terapia-do-cacau" element={<CacauTherapy />} />
             <Route path="/terapia/:slug" element={<TherapyDetail />} />
             <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
             <Route path="/politica-de-cookies" element={<CookiePolicy />} />
