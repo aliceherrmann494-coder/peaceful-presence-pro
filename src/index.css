@@ -58,6 +58,17 @@
     --gradient-cacao: linear-gradient(135deg, hsl(var(--cacao)) 0%, hsl(var(--cacao-soft)) 55%, hsl(var(--cacao-olive)) 100%);
     --shadow-cacao: 0 18px 50px -20px hsl(var(--cacao) / 0.35);
 
+    /* Access palette (Barras de Access) — lilás/azul sutil + oliva */
+    --access: 255 35% 38%;
+    --access-soft: 255 30% 52%;
+    --access-cream: 270 40% 95%;
+    --access-sand: 268 28% 88%;
+    --access-olive: 82 18% 34%;
+    --access-mist: 250 45% 96%;
+    --gradient-access: linear-gradient(135deg, hsl(var(--access)) 0%, hsl(var(--access-soft)) 55%, hsl(var(--access-olive)) 100%);
+    --shadow-access: 0 18px 50px -20px hsl(var(--access) / 0.35);
+
+
     --shadow-soft: 0 2px 20px -4px hsl(150 30% 12% / 0.08);
     --shadow-card: 0 4px 30px -8px hsl(150 30% 12% / 0.1);
   }

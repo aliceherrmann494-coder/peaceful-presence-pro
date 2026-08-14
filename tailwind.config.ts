@@ -59,6 +59,14 @@ export default {
           olive: "hsl(var(--cacao-olive))",
           gold: "hsl(var(--cacao-gold))",
         },
+        access: {
+          DEFAULT: "hsl(var(--access))",
+          soft: "hsl(var(--access-soft))",
+          cream: "hsl(var(--access-cream))",
+          sand: "hsl(var(--access-sand))",
+          olive: "hsl(var(--access-olive))",
+          mist: "hsl(var(--access-mist))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
