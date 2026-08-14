@@ -68,6 +68,17 @@
     --gradient-access: linear-gradient(135deg, hsl(var(--access)) 0%, hsl(var(--access-soft)) 55%, hsl(var(--access-olive)) 100%);
     --shadow-access: 0 18px 50px -20px hsl(var(--access) / 0.35);
 
+    /* Reiki palette — oliva, creme, bege, dourado */
+    --reiki: 82 22% 24%;
+    --reiki-soft: 82 20% 40%;
+    --reiki-cream: 60 30% 95%;
+    --reiki-sand: 45 25% 88%;
+    --reiki-olive: 82 18% 34%;
+    --reiki-gold: 43 55% 52%;
+    --gradient-reiki: linear-gradient(135deg, hsl(var(--reiki)) 0%, hsl(var(--reiki-soft)) 55%, hsl(var(--reiki-olive)) 100%);
+    --shadow-reiki: 0 18px 50px -20px hsl(var(--reiki) / 0.35);
+
+
 
     --shadow-soft: 0 2px 20px -4px hsl(150 30% 12% / 0.08);
     --shadow-card: 0 4px 30px -8px hsl(150 30% 12% / 0.1);
