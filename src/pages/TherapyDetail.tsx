@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { therapies } from "@/data/therapies";
 import { ArrowLeft, Clock, CheckCircle2, Heart, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
 
 import reikiImg from "@/assets/therapy-reiki.jpg";
 import barrasImg from "@/assets/therapy-barras.jpg";
@@ -164,15 +165,19 @@ const TherapyDetail = () => {
           <p className="text-muted-foreground font-sans mb-8 max-w-xl mx-auto">
             Agende sua sessão de {therapy.title} e dê o primeiro passo rumo ao seu equilíbrio.
           </p>
-          <a
-            href="https://wa.me/554599891066"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-sans px-8 py-6 text-base rounded-full">
-              Agendar pelo WhatsApp
-            </Button>
-          </a>
+          <WhatsAppScheduler
+            therapy={therapy.title}
+            topics={[
+              "Ansiedade e estresse",
+              "Dores no corpo",
+              "Insônia",
+              "Equilíbrio emocional",
+              "Autoconhecimento",
+              "Autocuidado",
+            ]}
+            className="max-w-2xl mx-auto"
+          />
+
         </section>
       </div>
     </main>
