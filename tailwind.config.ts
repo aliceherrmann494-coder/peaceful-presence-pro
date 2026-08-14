@@ -51,6 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        cacao: {
+          DEFAULT: "hsl(var(--cacao))",
+          soft: "hsl(var(--cacao-soft))",
+          cream: "hsl(var(--cacao-cream))",
+          sand: "hsl(var(--cacao-sand))",
+          olive: "hsl(var(--cacao-olive))",
+          gold: "hsl(var(--cacao-gold))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -70,6 +78,7 @@ export default {
       boxShadow: {
         soft: "var(--shadow-soft)",
         card: "var(--shadow-card)",
+        cacao: "var(--shadow-cacao)",
       },
       keyframes: {
         "accordion-down": {
