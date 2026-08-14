@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { therapies } from "@/data/therapies";
 import { ArrowLeft, Clock, CheckCircle2, Heart, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
 
 import reikiImg from "@/assets/therapy-reiki.jpg";
 import barrasImg from "@/assets/therapy-barras.jpg";
