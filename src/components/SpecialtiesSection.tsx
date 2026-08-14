@@ -1,11 +1,12 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { Ear, BrainCircuit, HandHeart, Network } from "lucide-react";
+import { BrainCircuit, HandHeart, Network } from "lucide-react";
 import { Link } from "react-router-dom";
 import cacauIcon from "@/assets/icone-cacau.png.asset.json";
+import auricularIcon from "@/assets/icone-auricular.png.asset.json";
 
 const specialties = [
   {
-    icon: Ear,
+    image: auricularIcon.url,
     title: "Acupuntura Auricular",
     slug: "auriculoterapia",
     description: "Estímulo de pontos na orelha para tratar disfunções físicas e emocionais de forma natural.",
@@ -59,7 +60,7 @@ const SpecialtiesSection = () => {
               className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group"
             >
               {item.image ? (
-                <img src={item.image} alt="Ícone da Terapia do Cacau" className="w-12 h-12 object-contain mb-4" loading="lazy" />
+                <img src={item.image} alt={`Ícone de ${item.title}`} className="w-12 h-12 object-contain mb-4" loading="lazy" />
               ) : (
                 <item.icon className="w-8 h-8 text-accent mb-5" strokeWidth={1.5} />
               )}
