@@ -15,11 +15,10 @@ import {
   Plus,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import saisImgAsset from "@/assets/sais-de-banho.jpg.asset.json";
+import saisImg from "@/assets/sais-de-banho.jpg";
 import saisTextura from "@/assets/sais-textura.jpg";
 import saisEscalda from "@/assets/sais-escalda-ps.jpg";
 
-const saisImg = saisImgAsset.url;
 
 
 const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
