@@ -11,6 +11,8 @@ import {
   Gift,
   Check,
   ShieldCheck,
+  Minus,
+  Plus,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import saisImgAsset from "@/assets/sais-de-banho.jpg.asset.json";
@@ -19,8 +21,6 @@ import saisEscalda from "@/assets/sais-escalda-ps.jpg";
 
 const saisImg = saisImgAsset.url;
 
-const WHATSAPP_URL =
-  "https://wa.me/554599891066?text=Ol%C3%A1%21%20Gostaria%20de%20encomendar%20os%20Sais%20de%20Banho%20Terap%C3%AAuticos";
 
 const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -109,8 +109,29 @@ const ingredients = [
   "Óleos Essenciais Terapêuticos",
 ];
 
+const sizeOptions = [
+  { id: "150g", label: "Pote 150g", note: "Ideal para experimentar (2 a 3 escalda-pés)" },
+  { id: "300g", label: "Pote 300g", note: "O mais pedido — ritual semanal do mês" },
+  { id: "500g", label: "Pote 500g", note: "Melhor custo — para uso contínuo ou presente" },
+];
+
 const SaisDeBanho = () => {
   const [activeImg, setActiveImg] = useState(0);
+  const [size, setSize] = useState(sizeOptions[1].id);
+  const [qty, setQty] = useState(1);
+
+  const selectedSize = sizeOptions.find((s) => s.id === size) ?? sizeOptions[1];
+
+  const buildUrl = (intro: string) =>
+    `https://wa.me/554599891066?text=${encodeURIComponent(
+      `${intro}\n\n• Tamanho: ${selectedSize.label}\n• Quantidade: ${qty} ${qty > 1 ? "unidades" : "unidade"}`,
+    )}`;
+
+  const orderUrl = buildUrl("Olá! Gostaria de encomendar os Sais de Banho Terapêuticos.");
+  const giftUrl = buildUrl(
+    "Olá! Gostaria de encomendar os Sais de Banho Terapêuticos para presente.",
+  );
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -208,15 +229,74 @@ const SaisDeBanho = () => {
                   Encomenda personalizada com a terapeuta Juliana Corrêa.
                 </p>
 
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="block mt-5">
+                {/* Tamanho */}
+                <div className="mt-6">
+                  <p className="font-sans text-sm font-medium text-sais mb-3">
+                    Escolha o tamanho
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    {sizeOptions.map((opt) => (
+                      <button
+                        key={opt.id}
+                        type="button"
+                        onClick={() => setSize(opt.id)}
+                        aria-pressed={size === opt.id}
+                        className={`text-left rounded-xl border px-4 py-3 transition-colors ${
+                          size === opt.id
+                            ? "border-sais bg-sais/5"
+                            : "border-sais-sand hover:border-sais/40"
+                        }`}
+                      >
+                        <span className="block font-sans text-sm font-medium text-sais">
+                          {opt.label}
+                        </span>
+                        <span className="block font-sans text-xs text-sais/60 mt-0.5">
+                          {opt.note}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Quantidade */}
+                <div className="mt-5 flex items-center justify-between gap-4">
+                  <p className="font-sans text-sm font-medium text-sais">Quantidade</p>
+                  <div className="flex items-center gap-1 rounded-full border border-sais-sand bg-white/70 p-1">
+                    <button
+                      type="button"
+                      onClick={() => setQty((q) => Math.max(1, q - 1))}
+                      aria-label="Diminuir quantidade"
+                      className="w-9 h-9 rounded-full flex items-center justify-center text-sais hover:bg-sais/10 transition-colors"
+                    >
+                      <Minus className="w-4 h-4" />
+                    </button>
+                    <span
+                      aria-live="polite"
+                      className="min-w-8 text-center font-sans text-sm font-semibold text-sais"
+                    >
+                      {qty}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setQty((q) => Math.min(20, q + 1))}
+                      aria-label="Aumentar quantidade"
+                      className="w-9 h-9 rounded-full flex items-center justify-center text-sais hover:bg-sais/10 transition-colors"
+                    >
+                      <Plus className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+
+                <a href={orderUrl} target="_blank" rel="noopener noreferrer" className="block mt-5">
                   <Button
                     size="lg"
                     className="w-full bg-sais hover:bg-sais/90 text-sais-cream font-sans font-medium px-8 py-6 text-base rounded-full shadow-sais"
                   >
                     <WhatsAppIcon className="w-5 h-5 mr-2" />
-                    Comprar / Encomendar pelo WhatsApp
+                    Encomendar {selectedSize.label} pelo WhatsApp
                   </Button>
                 </a>
+
               </div>
 
               <p className="font-sans text-xs text-sais/55 mt-4 flex items-center gap-2">
@@ -342,7 +422,7 @@ const SaisDeBanho = () => {
                 ou lembrança corporativa de bem-estar. Um presente que cuida, relaxa e demonstra
                 carinho de forma genuína.
               </p>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
+              <a href={giftUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-6">
                 <Button
                   size="lg"
                   variant="outline"
@@ -372,7 +452,7 @@ const SaisDeBanho = () => {
           </p>
 
           <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={orderUrl} target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 className="w-full sm:w-auto bg-sais hover:bg-sais/90 text-sais-cream font-sans font-medium px-8 py-6 text-base rounded-full shadow-sais"
@@ -397,7 +477,7 @@ const SaisDeBanho = () => {
 
       {/* Botão flutuante do WhatsApp */}
       <a
-        href={WHATSAPP_URL}
+        href={orderUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"
