@@ -420,7 +420,7 @@ const SaisDeBanho = () => {
             Leve para casa
           </span>
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-sais mt-3">
-            Leve a Experiência da AlinhaMente Para a Sua Casa
+            Leve a Ciência e o Cuidado da AlinhaMente Para a Sua Casa
           </h2>
           <p className="font-sans text-base md:text-lg text-sais/70 leading-relaxed mt-5 max-w-2xl mx-auto">
             Encomende agora seus Sais de Banho Terapêuticos & Escalda-Pés diretamente com a
