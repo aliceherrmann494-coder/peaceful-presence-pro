@@ -107,7 +107,7 @@ const TherapyDetail = () => {
         </section>
 
         {/* How it works */}
-        <section className="grid md:grid-cols-2 gap-12 items-center">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Sparkles className="w-6 h-6 text-accent" strokeWidth={1.5} />
@@ -132,7 +132,7 @@ const TherapyDetail = () => {
         </section>
 
         {/* Who is it for + Duration */}
-        <section className="grid md:grid-cols-2 gap-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-card rounded-2xl p-8 shadow-soft">
             <div className="flex items-center gap-3 mb-4">
               <Users className="w-6 h-6 text-accent" strokeWidth={1.5} />

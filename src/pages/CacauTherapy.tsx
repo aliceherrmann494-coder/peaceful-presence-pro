@@ -148,7 +148,7 @@ const CacauTherapy = () => {
             <ArrowLeft className="w-4 h-4" /> Voltar às terapias
           </Link>
 
-          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-center mt-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-center mt-10">
             <div>
               <span className="inline-block font-sans text-xs md:text-sm tracking-[0.22em] uppercase text-cacao-gold mb-5">
                 Espaço AlinhaMente · Cascavel - PR
@@ -248,7 +248,7 @@ const CacauTherapy = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pillars.map(({ icon: Icon, title, text }) => (
               <article
                 key={title}
@@ -324,7 +324,7 @@ const CacauTherapy = () => {
 
       {/* Seção 6 — Para quem é indicada */}
       <section className="bg-cacao-cream py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div className="max-w-5xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div>
             <span className="font-sans text-xs tracking-[0.22em] uppercase text-cacao-olive">
               Indicações
