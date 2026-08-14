@@ -9,6 +9,7 @@ export interface Product {
   description: string;
   slug: string;
   image: string;
+  pageUrl?: string;
 }
 
 export const products: Product[] = [

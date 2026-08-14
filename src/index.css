@@ -88,7 +88,16 @@
     --gradient-sistemica: linear-gradient(135deg, hsl(var(--sistemica)) 0%, hsl(var(--sistemica-soft)) 55%, hsl(var(--sistemica-olive)) 100%);
     --shadow-sistemica: 0 18px 50px -20px hsl(var(--sistemica) / 0.35);
 
-
+    /* Sais palette (Sais de Banho Terapêuticos) — terracota amadeirado, oliva, creme, areia */
+    --sais: 28 40% 32%;
+    --sais-soft: 28 34% 46%;
+    --sais-cream: 50 35% 95%;
+    --sais-sand: 42 28% 86%;
+    --sais-olive: 82 18% 34%;
+    --sais-moss: 95 24% 26%;
+    --sais-gold: 36 50% 52%;
+    --gradient-sais: linear-gradient(135deg, hsl(var(--sais)) 0%, hsl(var(--sais-soft)) 55%, hsl(var(--sais-olive)) 100%);
+    --shadow-sais: 0 18px 50px -20px hsl(var(--sais) / 0.35);
 
     --shadow-soft: 0 2px 20px -4px hsl(150 30% 12% / 0.08);
     --shadow-card: 0 4px 30px -8px hsl(150 30% 12% / 0.1);
