@@ -109,22 +109,16 @@ const ingredients = [
   "Óleos Essenciais Terapêuticos",
 ];
 
-const sizeOptions = [
-  { id: "150g", label: "Pote 150g", note: "Ideal para experimentar (2 a 3 escalda-pés)" },
-  { id: "300g", label: "Pote 300g", note: "O mais pedido — ritual semanal do mês" },
-  { id: "500g", label: "Pote 500g", note: "Melhor custo — para uso contínuo ou presente" },
-];
+const SIZE_LABEL = "Pote 150g";
+const PRICE = "R$ 29,90";
 
 const SaisDeBanho = () => {
   const [activeImg, setActiveImg] = useState(0);
-  const [size, setSize] = useState(sizeOptions[1].id);
   const [qty, setQty] = useState(1);
-
-  const selectedSize = sizeOptions.find((s) => s.id === size) ?? sizeOptions[1];
 
   const buildUrl = (intro: string) =>
     `https://wa.me/554599891066?text=${encodeURIComponent(
-      `${intro}\n\n• Tamanho: ${selectedSize.label}\n• Quantidade: ${qty} ${qty > 1 ? "unidades" : "unidade"}`,
+      `${intro}\n\n• Tamanho: ${SIZE_LABEL}\n• Valor: ${PRICE}\n• Quantidade: ${qty} ${qty > 1 ? "unidades" : "unidade"}`,
     )}`;
 
   const orderUrl = buildUrl("Olá! Gostaria de encomendar os Sais de Banho Terapêuticos.");
@@ -223,43 +217,14 @@ const SaisDeBanho = () => {
               <div className="mt-7 p-5 md:p-6 rounded-2xl bg-white/60 border border-sais-sand">
                 <p className="font-sans text-sm text-sais/60 mb-1">Valor de investimento</p>
                 <p className="font-serif text-2xl md:text-3xl font-semibold text-sais">
-                  Consulte pelo WhatsApp
+                  {PRICE} <span className="text-base font-sans font-normal text-sais/60">· {SIZE_LABEL}</span>
                 </p>
                 <p className="font-sans text-sm text-sais/60 mt-1">
                   Encomenda personalizada com a terapeuta Juliana Corrêa.
                 </p>
 
-                {/* Tamanho */}
-                <div className="mt-6">
-                  <p className="font-sans text-sm font-medium text-sais mb-3">
-                    Escolha o tamanho
-                  </p>
-                  <div className="flex flex-col gap-2">
-                    {sizeOptions.map((opt) => (
-                      <button
-                        key={opt.id}
-                        type="button"
-                        onClick={() => setSize(opt.id)}
-                        aria-pressed={size === opt.id}
-                        className={`text-left rounded-xl border px-4 py-3 transition-colors ${
-                          size === opt.id
-                            ? "border-sais bg-sais/5"
-                            : "border-sais-sand hover:border-sais/40"
-                        }`}
-                      >
-                        <span className="block font-sans text-sm font-medium text-sais">
-                          {opt.label}
-                        </span>
-                        <span className="block font-sans text-xs text-sais/60 mt-0.5">
-                          {opt.note}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
                 {/* Quantidade */}
-                <div className="mt-5 flex items-center justify-between gap-4">
+                <div className="mt-6 flex items-center justify-between gap-4">
                   <p className="font-sans text-sm font-medium text-sais">Quantidade</p>
                   <div className="flex items-center gap-1 rounded-full border border-sais-sand bg-white/70 p-1">
                     <button
@@ -293,7 +258,7 @@ const SaisDeBanho = () => {
                     className="w-full bg-sais hover:bg-sais/90 text-sais-cream font-sans font-medium px-8 py-6 text-base rounded-full shadow-sais"
                   >
                     <WhatsAppIcon className="w-5 h-5 mr-2" />
-                    Encomendar {selectedSize.label} pelo WhatsApp
+                    Encomendar {SIZE_LABEL} pelo WhatsApp
                   </Button>
                 </a>
 
