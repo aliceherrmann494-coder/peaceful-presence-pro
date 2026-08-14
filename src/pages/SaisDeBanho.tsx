@@ -21,8 +21,6 @@ import saisEscalda from "@/assets/sais-escalda-ps.jpg";
 
 const saisImg = saisImgAsset.url;
 
-const WHATSAPP_URL =
-  "https://wa.me/554599891066?text=Ol%C3%A1%21%20Gostaria%20de%20encomendar%20os%20Sais%20de%20Banho%20Terap%C3%AAuticos";
 
 const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="currentColor">
