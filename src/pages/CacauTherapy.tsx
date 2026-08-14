@@ -182,7 +182,7 @@ const CacauTherapy = () => {
                   <img
                     src={cacauImg}
                     alt="Ritual de cacau cerimonial no Espaço AlinhaMente"
-                    className="w-full h-64 sm:h-80 lg:h-[26rem] object-cover"
+                    className="w-full h-80 sm:h-96 lg:h-[34rem] object-cover"
                     loading="lazy"
                     width={1024}
                     height={640}
