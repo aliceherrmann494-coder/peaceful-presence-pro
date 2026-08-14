@@ -16,6 +16,7 @@ import {
   Feather,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
 import cacauImg from "@/assets/therapy-cacau.jpg";
 import cacauIcon from "@/assets/icone-cacau.png.asset.json";
 
@@ -366,6 +367,17 @@ const CacauTherapy = () => {
             Reserve um tempo só para você. Agende sua sessão de Terapia do Cacau na AlinhaMente
             Terapias Integradas, em Cascavel - PR, e permita-se voltar ao seu próprio ritmo.
           </p>
+
+
+          <WhatsAppScheduler
+
+            therapy="Terapia do Cacau"
+
+            topics={["Reconexão com o coração", "Estresse da rotina", "Bloqueios emocionais", "Autoconhecimento", "Criatividade", "Autocuidado"]}
+
+            className="mt-9 max-w-2xl mx-auto"
+
+          />
 
           <div className="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">

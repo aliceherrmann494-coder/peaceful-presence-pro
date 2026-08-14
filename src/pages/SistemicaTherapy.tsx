@@ -13,6 +13,7 @@ import {
   Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
 import {
   Accordion,
   AccordionContent,
@@ -353,6 +354,17 @@ const SistemicaTherapy = () => {
             Agende sua sessão de Autoconstelação Sistêmica com a Terapeuta Juliana Moço Corrêa e
             ocupe o seu verdadeiro lugar de força.
           </p>
+
+
+          <WhatsAppScheduler
+
+            therapy="Autoconstelação Sistêmica"
+
+            topics={["Relacionamentos e família", "Terapia de casal", "Bloqueios financeiros", "Ansiedade e medos", "Autoconhecimento", "Luto e perdas"]}
+
+            className="mt-9 max-w-2xl mx-auto"
+
+          />
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">

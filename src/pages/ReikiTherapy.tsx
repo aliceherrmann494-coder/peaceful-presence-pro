@@ -14,6 +14,7 @@ import {
   Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
 import {
   Accordion,
   AccordionContent,
@@ -351,6 +352,17 @@ const ReikiTherapy = () => {
             Agende sua sessão de Reiki com a Terapeuta Juliana Moço Corrêa e sinta a energia da cura
             e do acolhimento na AlinhaMente.
           </p>
+
+
+          <WhatsAppScheduler
+
+            therapy="Reiki"
+
+            topics={["Estresse e ansiedade", "Insônia", "Cansaço energético", "Dores no corpo", "Equilíbrio emocional", "Autocuidado"]}
+
+            className="mt-9 max-w-2xl mx-auto"
+
+          />
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">

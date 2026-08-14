@@ -15,6 +15,7 @@ import {
   Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
 import {
   Accordion,
   AccordionContent,
@@ -360,6 +361,17 @@ const AuricularTherapy = () => {
             Agende sua sessão de Acupuntura Auricular com a terapeuta Juliana Moço Corrêa e sinta a
             leveza de viver sem dores e sem sobrecarga.
           </p>
+
+
+          <WhatsAppScheduler
+
+            therapy="Acupuntura Auricular"
+
+            topics={["Dores crônicas", "Ansiedade e estresse", "Insônia", "Enxaqueca", "Compulsão alimentar", "Sobrecarga mental"]}
+
+            className="mt-9 max-w-2xl mx-auto"
+
+          />
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">

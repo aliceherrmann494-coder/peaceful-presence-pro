@@ -14,6 +14,7 @@ import {
   Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
 import {
   Accordion,
   AccordionContent,
@@ -350,6 +351,17 @@ const BarrasTherapy = () => {
             Agende sua sessão de Barras de Access Consciousness com a Terapeuta Juliana Moço Corrêa e
             sinta a clareza e a paz que você merece.
           </p>
+
+
+          <WhatsAppScheduler
+
+            therapy="Barras de Access Consciousness"
+
+            topics={["Mente acelerada", "Ansiedade", "Bloqueios e limitações", "Insônia", "Excesso de pensamentos", "Clareza para decisões"]}
+
+            className="mt-9 max-w-2xl mx-auto"
+
+          />
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
