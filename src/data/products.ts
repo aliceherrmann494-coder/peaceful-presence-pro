@@ -9,6 +9,7 @@ export interface Product {
   description: string;
   slug: string;
   image: string;
+  pageUrl?: string;
 }
 
 export const products: Product[] = [
@@ -23,6 +24,7 @@ export const products: Product[] = [
     slug: "sais-de-banho",
     description: "Sais minerais selecionados para banhos de imersão que ajudam a aliviar tensões, purificar energias e restaurar o equilíbrio.",
     image: productBathSalts,
+    pageUrl: "/produto/sais-de-banho",
   },
   {
     name: "Incensos",

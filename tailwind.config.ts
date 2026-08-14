@@ -83,6 +83,15 @@ export default {
           olive: "hsl(var(--sistemica-olive))",
           gold: "hsl(var(--sistemica-gold))",
         },
+        sais: {
+          DEFAULT: "hsl(var(--sais))",
+          soft: "hsl(var(--sais-soft))",
+          cream: "hsl(var(--sais-cream))",
+          sand: "hsl(var(--sais-sand))",
+          olive: "hsl(var(--sais-olive))",
+          moss: "hsl(var(--sais-moss))",
+          gold: "hsl(var(--sais-gold))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
