@@ -1,4 +1,6 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import portraitImg from "@/assets/juliana-bio.jpg";
 
 const BioSection = () => {
@@ -49,6 +51,13 @@ const BioSection = () => {
               <li className="flex items-center gap-2"><span className="text-accent">✓</span> Superação de padrões negativos</li>
               <li className="flex items-center gap-2"><span className="text-accent">✓</span> Reconexão com sua essência</li>
             </ul>
+
+            <Link
+              to="/terapias-integradas"
+              className="inline-flex items-center gap-2 mt-8 text-accent font-sans text-sm font-medium hover:gap-3 transition-all"
+            >
+              Conheça as Terapias Integradas <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </div>
