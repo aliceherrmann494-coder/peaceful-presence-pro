@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cacauImg from "@/assets/therapy-cacau.jpg";
+import cacauIcon from "@/assets/icone-cacau.png.asset.json";
 
 const WHATSAPP_URL =
   "https://wa.me/554599891066?text=Ol%C3%A1%2C%20Juliana!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Terapia%20do%20Cacau.";
