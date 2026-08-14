@@ -67,6 +67,14 @@ export default {
           olive: "hsl(var(--access-olive))",
           mist: "hsl(var(--access-mist))",
         },
+        reiki: {
+          DEFAULT: "hsl(var(--reiki))",
+          soft: "hsl(var(--reiki-soft))",
+          cream: "hsl(var(--reiki-cream))",
+          sand: "hsl(var(--reiki-sand))",
+          olive: "hsl(var(--reiki-olive))",
+          gold: "hsl(var(--reiki-gold))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -88,6 +96,7 @@ export default {
         card: "var(--shadow-card)",
         cacao: "var(--shadow-cacao)",
         access: "var(--shadow-access)",
+        reiki: "var(--shadow-reiki)",
       },
       keyframes: {
         "fade-in": {
