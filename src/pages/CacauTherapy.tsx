@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cacauImg from "@/assets/therapy-cacau.jpg";
+import cacauIcon from "@/assets/icone-cacau.png.asset.json";
 
 const WHATSAPP_URL =
   "https://wa.me/554599891066?text=Ol%C3%A1%2C%20Juliana!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Terapia%20do%20Cacau.";
@@ -206,7 +207,12 @@ const CacauTherapy = () => {
       {/* Seção 2 — Introdução & conexão emocional */}
       <section className="bg-cacao-cream py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6 md:px-12 text-center">
-          <Heart className="w-8 h-8 text-cacao-soft mx-auto mb-6" strokeWidth={1.4} />
+          <img
+            src={cacauIcon.url}
+            alt="Ícone de xícara de cacau com folhas"
+            className="w-14 h-14 mx-auto mb-6 object-contain"
+            loading="lazy"
+          />
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-cacao leading-tight">
             Você sente que a rotina acelerada tem te desconectado de si mesma?
           </h2>
