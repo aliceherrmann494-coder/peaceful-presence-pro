@@ -11,6 +11,7 @@ const CacauTherapy = lazy(() => import("./pages/CacauTherapy.tsx"));
 const AuricularTherapy = lazy(() => import("./pages/AuricularTherapy.tsx"));
 const BarrasTherapy = lazy(() => import("./pages/BarrasTherapy.tsx"));
 const ReikiTherapy = lazy(() => import("./pages/ReikiTherapy.tsx"));
+const SistemicaTherapy = lazy(() => import("./pages/SistemicaTherapy.tsx"));
 const TherapyDetail = lazy(() => import("./pages/TherapyDetail.tsx"));
 const IntegratedTherapies = lazy(() => import("./pages/IntegratedTherapies.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/terapia/auriculoterapia" element={<AuricularTherapy />} />
             <Route path="/terapia/barras-de-access" element={<BarrasTherapy />} />
             <Route path="/terapia/reiki" element={<ReikiTherapy />} />
+            <Route path="/terapia/autoconstelacao-sistemica" element={<SistemicaTherapy />} />
             <Route path="/terapia/:slug" element={<TherapyDetail />} />
             <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
             <Route path="/politica-de-cookies" element={<CookiePolicy />} />
