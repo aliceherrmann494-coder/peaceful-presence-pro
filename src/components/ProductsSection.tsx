@@ -1,34 +1,54 @@
 import { Link } from "react-router-dom";
+import { Check } from "lucide-react";
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { products } from "@/data/products";
+import { products, WHATSAPP_NUMBER, type TagTone } from "@/data/products";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+
+const tagToneClasses: Record<TagTone, string> = {
+  olive: "bg-sais-olive/15 text-sais-olive border border-sais-olive/25",
+  gold: "bg-sais-gold/25 text-sais-moss border border-sais-gold/40",
+  destaque: "bg-sais text-sais-cream border border-sais-olive/40 shadow-sm",
+  neutro: "bg-white/85 text-sais-moss border border-sais-sand",
+};
 
 const ProductsSection = () => {
   const ref = useFadeIn();
 
+  const kitWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    "Olá Juliana! Gostaria de montar um Kit de presente personalizado (ou corporativo) com os produtos da Botica AlinhaMente. Pode me ajudar?"
+  )}`;
+
   return (
-    <section id="produtos" className="py-24 px-6 md:px-16 bg-background">
-      <div ref={ref} className="fade-in-section max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
-            Produtos Terapêuticos
+    <section id="produtos" className="py-20 md:py-28 px-6 md:px-16 bg-background">
+      <div ref={ref} className="fade-in-section max-w-7xl mx-auto">
+        {/* Cabeçalho */}
+        <div className="text-center mb-14 max-w-3xl mx-auto">
+          <span className="inline-block text-xs font-sans uppercase tracking-[0.2em] text-sais-olive mb-4">
+            Vitrine de Autocuidado
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-5 leading-tight">
+            Botica Terapêutica AlinhaMente 🌿✨
           </h2>
-          <p className="text-muted-foreground font-sans max-w-3xl mx-auto">
-            Produtos naturais selecionados para complementar seu processo de cura e bem-estar no dia a dia.
+          <p className="text-muted-foreground font-sans text-base md:text-lg leading-relaxed">
+            Leve a experiência de relaxamento, alinhamento e cura do consultório
+            diretamente para o seu ritual diário em casa.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid de produtos */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 items-stretch">
           {products.map((product) => {
-            const whatsappUrl = `https://wa.me/554599891066?text=${encodeURIComponent(
-              `Olá! Gostaria de saber mais sobre o produto: ${product.name}`
+            const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+              `Olá Juliana! Tenho interesse em: ${product.name}. Pode me passar as opções e valores?`
             )}`;
 
             return (
-              <div
+              <article
                 key={product.slug}
-                className="bg-card rounded-2xl border shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group flex flex-col overflow-hidden"
+                className="group flex flex-col bg-card rounded-xl border border-border shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                <div className="aspect-square overflow-hidden bg-muted/50 flex items-center justify-center p-6 sm:p-8">
+                {/* Imagem + tag */}
+                <div className="relative aspect-square bg-muted/40 flex items-center justify-center p-6 sm:p-8">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -38,35 +58,76 @@ const ProductsSection = () => {
                     height={768}
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
+                  <span
+                    className={`absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] md:text-xs font-sans font-medium ${tagToneClasses[product.tagTone]}`}
+                  >
+                    {product.tag}
+                  </span>
                 </div>
-                <div className="p-8 flex flex-col flex-1">
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
+
+                {/* Conteúdo */}
+                <div className="p-5 md:p-6 flex flex-col flex-1">
+                  <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-muted-foreground font-sans text-sm leading-relaxed flex-1">
-                    {product.description}
+                  <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
+                    {product.shortDescription}
                   </p>
+
+                  <ul className="space-y-2 mb-5">
+                    {product.highlights.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-2 text-sm font-sans text-foreground/80"
+                      >
+                        <Check
+                          size={16}
+                          className="mt-0.5 shrink-0 text-sais-olive"
+                          strokeWidth={2.5}
+                        />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
                   {product.pageUrl ? (
                     <Link
                       to={product.pageUrl}
-                      className="inline-block mt-4 text-accent font-sans text-sm font-medium hover:underline underline-offset-4"
+                      className="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-lg bg-sais-olive px-4 py-3 text-center font-sans text-sm font-medium text-white hover:bg-sais transition-colors duration-300 shadow-sm"
                     >
-                      Saiba mais →
+                      Ver Opções & Comprar
                     </Link>
                   ) : (
                     <a
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mt-4 text-accent font-sans text-sm font-medium hover:underline underline-offset-4"
+                      className="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-lg bg-sais-olive px-4 py-3 text-center font-sans text-sm font-medium text-white hover:bg-sais transition-colors duration-300 shadow-sm"
                     >
-                      Saiba mais →
+                      Ver Opções & Comprar
                     </a>
                   )}
                 </div>
-              </div>
+              </article>
             );
           })}
+        </div>
+
+        {/* Banner inferior — Kit personalizado */}
+        <div className="mt-10 md:mt-12 rounded-xl border border-sais-sand bg-sais-cream/60 px-6 md:px-10 py-7 md:py-8 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+          <p className="font-serif text-lg md:text-xl text-foreground">
+            Quer montar um <strong className="text-sais">Kit de Presente Personalizado</strong> ou
+            corporativo?
+          </p>
+          <a
+            href={kitWhatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-sais-olive/40 bg-white px-5 py-3 font-sans text-sm font-medium text-sais hover:bg-sais-olive/10 transition-colors duration-300 shadow-sm whitespace-nowrap"
+          >
+            <WhatsAppIcon className="w-4 h-4 text-sais-olive" />
+            Falar com a Juliana no WhatsApp
+          </a>
         </div>
       </div>
     </section>
