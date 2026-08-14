@@ -8,6 +8,7 @@ import Index from "./pages/Index.tsx";
 
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 const CacauTherapy = lazy(() => import("./pages/CacauTherapy.tsx"));
+const AuricularTherapy = lazy(() => import("./pages/AuricularTherapy.tsx"));
 const TherapyDetail = lazy(() => import("./pages/TherapyDetail.tsx"));
 const IntegratedTherapies = lazy(() => import("./pages/IntegratedTherapies.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
