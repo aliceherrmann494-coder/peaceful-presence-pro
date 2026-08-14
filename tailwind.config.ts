@@ -87,6 +87,7 @@ export default {
         soft: "var(--shadow-soft)",
         card: "var(--shadow-card)",
         cacao: "var(--shadow-cacao)",
+        access: "var(--shadow-access)",
       },
       keyframes: {
         "fade-in": {
