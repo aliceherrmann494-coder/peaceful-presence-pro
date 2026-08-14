@@ -11,6 +11,8 @@ import {
   Gift,
   Check,
   ShieldCheck,
+  Minus,
+  Plus,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import saisImgAsset from "@/assets/sais-de-banho.jpg.asset.json";
