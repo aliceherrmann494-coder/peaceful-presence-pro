@@ -1,5 +1,5 @@
 import productSoap from "@/assets/product-soap.jpg";
-import productBathSaltsAsset from "@/assets/sais-de-banho.png.asset.json";
+import productBathSaltsAsset from "@/assets/sais-de-banho.jpg.asset.json";
 import productIncense from "@/assets/product-incense.jpg";
 
 const productBathSalts = productBathSaltsAsset.url;

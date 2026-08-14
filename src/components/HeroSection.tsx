@@ -20,7 +20,15 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex flex-col">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
+        <img
+          src={heroBg}
+          alt=""
+          className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          fetchPriority="high"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-background/70" />
       </div>
 
