@@ -285,7 +285,7 @@ const SaisDeBanho = () => {
               Por que usar
             </span>
             <h2 className="font-serif text-2xl md:text-4xl font-semibold text-sais mt-3">
-              O Seu Ritual Diário de Desconexão e Cuidado
+              Como Este Produto Atua No Seu Corpo? (Benefícios Comprovados)
             </h2>
           </div>
 
