@@ -199,11 +199,11 @@ const SaisDeBanho = () => {
                 Espaço AlinhaMente · Cascavel - PR
               </span>
               <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl leading-[1.18] font-semibold text-sais">
-                Sais de Banho Terapêuticos & Escalda-Pés: Purificação e Relaxamento
+                Sais de Banho & Escalda-Pés: A Ciência do Relaxamento e da Recuperação Corporal
               </h1>
               <p className="font-sans text-base md:text-lg text-sais/70 leading-relaxed mt-4">
-                Transforme o seu banho em um ritual de autocuidado. Alivie o cansaço do dia,
-                descarregue tensões acumuladas e recarregue suas energias.
+                Alívio muscular, estímulo à circulação e renovação da pele através da sinergia entre
+                fitoervas, minerais puros e aromaterapia.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
