@@ -1,11 +1,12 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { Ear, BrainCircuit, HandHeart, Network } from "lucide-react";
+import { BrainCircuit, HandHeart, Network } from "lucide-react";
 import { Link } from "react-router-dom";
 import cacauIcon from "@/assets/icone-cacau.png.asset.json";
+import auricularIcon from "@/assets/icone-auricular.png.asset.json";
 
 const specialties = [
   {
-    icon: Ear,
+    image: auricularIcon.url,
     title: "Acupuntura Auricular",
     slug: "auriculoterapia",
     description: "Estímulo de pontos na orelha para tratar disfunções físicas e emocionais de forma natural.",
