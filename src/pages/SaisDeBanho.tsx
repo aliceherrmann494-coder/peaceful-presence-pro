@@ -109,8 +109,29 @@ const ingredients = [
   "Óleos Essenciais Terapêuticos",
 ];
 
+const sizeOptions = [
+  { id: "150g", label: "Pote 150g", note: "Ideal para experimentar (2 a 3 escalda-pés)" },
+  { id: "300g", label: "Pote 300g", note: "O mais pedido — ritual semanal do mês" },
+  { id: "500g", label: "Pote 500g", note: "Melhor custo — para uso contínuo ou presente" },
+];
+
 const SaisDeBanho = () => {
   const [activeImg, setActiveImg] = useState(0);
+  const [size, setSize] = useState(sizeOptions[1].id);
+  const [qty, setQty] = useState(1);
+
+  const selectedSize = sizeOptions.find((s) => s.id === size) ?? sizeOptions[1];
+
+  const buildUrl = (intro: string) =>
+    `https://wa.me/554599891066?text=${encodeURIComponent(
+      `${intro}\n\n• Tamanho: ${selectedSize.label}\n• Quantidade: ${qty} ${qty > 1 ? "unidades" : "unidade"}`,
+    )}`;
+
+  const orderUrl = buildUrl("Olá! Gostaria de encomendar os Sais de Banho Terapêuticos.");
+  const giftUrl = buildUrl(
+    "Olá! Gostaria de encomendar os Sais de Banho Terapêuticos para presente.",
+  );
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
