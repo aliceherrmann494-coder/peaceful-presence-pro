@@ -1,6 +1,7 @@
 import productSoap from "@/assets/product-soap.jpg";
 import productBathSaltsAsset from "@/assets/sais-de-banho.jpg.asset.json";
 import productIncense from "@/assets/product-incense.jpg";
+import productSprays from "@/assets/sprays-duo.jpg";
 
 const productBathSalts = productBathSaltsAsset.url;
 
@@ -31,5 +32,12 @@ export const products: Product[] = [
     slug: "incensos",
     description: "Incensos naturais para harmonização de ambientes, meditação e práticas terapêuticas, com aromas que elevam a vibração do espaço.",
     image: productIncense,
+  },
+  {
+    name: "Sprays Terapêuticos",
+    slug: "sprays-terapeuticos",
+    description: "Sprays aromatizadores e fitoenergéticos em frasco de vidro âmbar 100ml, nas versões Atenção/Foco e Equilíbrio, para alinhar emoções e harmonizar ambientes.",
+    image: productSprays,
+    pageUrl: "/produto/sprays-terapeuticos",
   },
 ];
