@@ -18,6 +18,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy.tsx"));
 const TermsOfUse = lazy(() => import("./pages/TermsOfUse.tsx"));
 const SaisDeBanho = lazy(() => import("./pages/SaisDeBanho.tsx"));
+const SpraysTerapeuticos = lazy(() => import("./pages/SpraysTerapeuticos.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
             <Route path="/politica-de-cookies" element={<CookiePolicy />} />
             <Route path="/produto/sais-de-banho" element={<SaisDeBanho />} />
+            <Route path="/produto/sprays-terapeuticos" element={<SpraysTerapeuticos />} />
             <Route path="/termos-de-uso" element={<TermsOfUse />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
