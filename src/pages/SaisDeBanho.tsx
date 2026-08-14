@@ -386,9 +386,13 @@ const SaisDeBanho = () => {
       <section className="bg-sais-sand/50 py-14 md:py-24">
         <div className="max-w-4xl mx-auto px-5 sm:px-6 md:px-12">
           <article className="bg-sais-cream rounded-3xl p-8 md:p-12 border border-sais-sand shadow-sais grid md:grid-cols-[1fr_1.2fr] gap-8 items-center">
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-sais-gold/15 flex items-center justify-center">
-              <Gift className="w-8 h-8 md:w-10 md:h-10 text-sais-gold" strokeWidth={1.5} />
-            </div>
+            <img
+              src={saisEscalda}
+              alt="Ritual de escalda-pés com sais de banho terapêuticos em bacia de madeira"
+              loading="lazy"
+              className="w-full h-56 md:h-72 object-cover rounded-2xl shadow-sais"
+            />
+
             <div>
               <h2 className="font-serif text-2xl md:text-3xl font-semibold text-sais">
                 Presenteie com Afeto & Autocuidado
