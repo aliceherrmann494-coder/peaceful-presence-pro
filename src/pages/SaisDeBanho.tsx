@@ -164,7 +164,7 @@ const SaisDeBanho = () => {
                   alt={galleryImages[activeImg].alt}
                   width={1024}
                   height={1024}
-                  className="w-full aspect-square object-cover"
+                  className="w-full aspect-square object-contain bg-white/60"
                 />
               </div>
               <div className="grid grid-cols-3 gap-3">
@@ -185,7 +185,7 @@ const SaisDeBanho = () => {
                       loading="lazy"
                       width={1024}
                       height={1024}
-                      className="w-full aspect-square object-cover"
+                      className="w-full aspect-square object-contain bg-white/60"
                     />
                   </button>
                 ))}
@@ -389,7 +389,7 @@ const SaisDeBanho = () => {
               src={saisEscalda}
               alt="Ritual de escalda-pés com sais de banho terapêuticos em bacia de madeira"
               loading="lazy"
-              className="w-full h-56 md:h-72 object-cover rounded-2xl shadow-sais"
+              className="w-full aspect-[4/3] object-contain bg-white/60 rounded-2xl shadow-sais"
             />
 
             <div>
