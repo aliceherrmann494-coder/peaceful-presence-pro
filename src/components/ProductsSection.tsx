@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { products } from "@/data/products";
 
