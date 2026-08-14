@@ -40,7 +40,7 @@ const ProductsSection = () => {
         </div>
 
         {/* Grid de produtos */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {products.map((product) => {
             const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
               `Olá Juliana! Tenho interesse em: ${product.name}. Pode me passar as opções e valores?`
@@ -49,10 +49,10 @@ const ProductsSection = () => {
             return (
               <article
                 key={product.slug}
-                className="group flex flex-col bg-card rounded-xl border border-border shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                className="group flex h-full flex-col bg-card rounded-2xl border border-sais-sand shadow-sais hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
                 {/* Imagem + tag */}
-                <div className="relative aspect-square bg-muted/40 flex items-center justify-center p-6 sm:p-8">
+                <div className="relative aspect-[4/3] sm:aspect-square bg-muted/40 flex items-center justify-center p-6">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -63,22 +63,22 @@ const ProductsSection = () => {
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   <span
-                    className={`absolute top-2 left-2 md:top-3 md:left-3 px-2.5 py-1 md:px-3 rounded-full text-[10px] md:text-xs font-sans font-medium leading-tight max-w-[calc(100%-1rem)] ${tagToneClasses[product.tagTone]}`}
+                    className={`absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-sans font-medium leading-tight max-w-[calc(100%-1rem)] ${tagToneClasses[product.tagTone]}`}
                   >
                     {product.tag}
                   </span>
                 </div>
 
                 {/* Conteúdo */}
-                <div className="p-5 md:p-6 flex flex-col flex-1">
-                  <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
                     {product.name}
                   </h3>
                   <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-4">
                     {product.shortDescription}
                   </p>
 
-                  <ul className="space-y-2 mb-5">
+                  <ul className="space-y-2 mb-6">
                     {product.highlights.map((item) => (
                       <li
                         key={item}
@@ -97,7 +97,7 @@ const ProductsSection = () => {
                   {product.pageUrl ? (
                     <Link
                       to={product.pageUrl}
-                      className="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-lg bg-sais-olive px-4 py-3 text-center font-sans text-sm font-medium text-white hover:bg-sais transition-colors duration-300 shadow-sm"
+                      className="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-lg bg-sais-olive px-4 py-3 text-center font-sans text-sm font-medium text-white hover:bg-sais transition-colors duration-300 shadow-sais"
                     >
                       Ver Opções & Comprar
                     </Link>
@@ -106,7 +106,7 @@ const ProductsSection = () => {
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-lg bg-sais-olive px-4 py-3 text-center font-sans text-sm font-medium text-white hover:bg-sais transition-colors duration-300 shadow-sm"
+                      className="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-lg bg-sais-olive px-4 py-3 text-center font-sans text-sm font-medium text-white hover:bg-sais transition-colors duration-300 shadow-sais"
                     >
                       Ver Opções & Comprar
                     </a>
@@ -118,7 +118,7 @@ const ProductsSection = () => {
         </div>
 
         {/* Banner inferior — Kit personalizado */}
-        <div className="mt-10 md:mt-12 rounded-xl border border-sais-sand bg-sais-cream/60 px-6 md:px-10 py-7 md:py-8 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+        <div className="mt-10 md:mt-12 rounded-2xl border border-sais-sand shadow-sais bg-sais-cream/60 px-6 md:px-10 py-7 md:py-8 flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
           <p className="font-serif text-lg md:text-xl text-foreground">
             Quer montar um <strong className="text-sais">Kit de Presente Personalizado</strong> ou
             corporativo?
