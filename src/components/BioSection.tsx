@@ -1,5 +1,5 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
-import portraitImg from "@/assets/juliana-bio.png";
+import portraitImg from "@/assets/juliana-bio.jpg";
 
 const BioSection = () => {
   const ref = useFadeIn();
