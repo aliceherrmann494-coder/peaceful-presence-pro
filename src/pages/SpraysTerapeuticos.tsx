@@ -63,7 +63,7 @@ const variants = [
     id: "kit",
     name: "Kit Combo Duplo",
     tag: "Foco + Equilíbrio",
-    price: "R$ 29,90",
+    price: "R$ 45,90",
     badge: "Mais vendido · desconto especial",
   },
 ] as const;
