@@ -158,7 +158,7 @@ const SaisDeBanho = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start mt-8 md:mt-10">
             {/* Galeria */}
             <div className="flex flex-col gap-4">
-              <div className="rounded-3xl overflow-hidden shadow-sais border border-sais-sand">
+              <div className="rounded-2xl overflow-hidden border border-sais-sand shadow-sais">
                 <img
                   src={galleryImages[activeImg].src}
                   alt={galleryImages[activeImg].alt}
@@ -217,7 +217,7 @@ const SaisDeBanho = () => {
                 </span>
               </div>
 
-              <div className="mt-7 p-5 md:p-6 rounded-2xl bg-white/60 border border-sais-sand">
+              <div className="mt-7 p-5 md:p-6 rounded-2xl bg-white/60 border border-sais-sand shadow-sais">
                 <p className="font-sans text-sm text-sais/60 mb-1">Valor de investimento</p>
                 <p className="font-serif text-2xl md:text-3xl font-semibold text-sais">
                   {PRICE} <span className="text-base font-sans font-normal text-sais/60">· {SIZE_LABEL}</span>
@@ -292,7 +292,7 @@ const SaisDeBanho = () => {
             {benefits.map(({ icon: Icon, title, text }) => (
               <article
                 key={title}
-                className="bg-sais-cream rounded-2xl p-6 border border-sais-sand hover:shadow-sais transition-shadow duration-300"
+                className="bg-sais-cream rounded-2xl p-6 border border-sais-sand shadow-sais transition-shadow duration-300"
               >
                 <div className="w-12 h-12 rounded-full bg-sais/12 flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-sais" strokeWidth={1.5} />
@@ -321,7 +321,7 @@ const SaisDeBanho = () => {
             {useModes.map((mode) => (
               <article
                 key={mode.title}
-                className="bg-white/60 rounded-2xl p-6 md:p-7 border border-sais-sand flex flex-col"
+                className="bg-white/60 rounded-2xl p-6 md:p-7 border border-sais-sand shadow-sais flex flex-col"
               >
                 <span className="font-sans text-xs tracking-[0.2em] uppercase text-sais-gold font-semibold">
                   {mode.tag}
@@ -384,12 +384,12 @@ const SaisDeBanho = () => {
       {/* Seção 5 — Sugestão de presente */}
       <section className="bg-sais-sand/50 py-14 md:py-24">
         <div className="max-w-4xl mx-auto px-5 sm:px-6 md:px-12">
-          <article className="bg-sais-cream rounded-3xl p-8 md:p-12 border border-sais-sand shadow-sais grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-8 items-center">
+          <article className="bg-sais-cream rounded-2xl p-8 md:p-12 border border-sais-sand shadow-sais grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-8 items-center">
             <img
               src={saisEscalda}
               alt="Ritual de escalda-pés com sais de banho terapêuticos em bacia de madeira"
               loading="lazy"
-              className="w-full aspect-square object-contain bg-white/60 rounded-2xl shadow-sais"
+              className="w-full aspect-square object-contain bg-white/60 rounded-2xl border border-sais-sand shadow-sais"
             />
 
             <div>

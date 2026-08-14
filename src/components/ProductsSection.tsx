@@ -26,7 +26,7 @@ const ProductsSection = () => {
             return (
               <div
                 key={product.slug}
-                className="bg-card rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group flex flex-col overflow-hidden"
+                className="bg-card rounded-2xl border shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group flex flex-col overflow-hidden"
               >
                 <div className="aspect-square overflow-hidden bg-muted/50 flex items-center justify-center p-6 sm:p-8">
                   <img

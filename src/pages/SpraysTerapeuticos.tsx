@@ -220,7 +220,7 @@ const SpraysTerapeuticos = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-start mt-8 md:mt-10">
             {/* Galeria */}
             <div className="flex flex-col gap-4">
-              <div className="rounded-3xl overflow-hidden shadow-sais border border-sais-sand">
+              <div className="rounded-2xl overflow-hidden border border-sais-sand shadow-sais">
                 <img
                   src={galleryImages[activeImg].src}
                   alt={galleryImages[activeImg].alt}
@@ -281,7 +281,7 @@ const SpraysTerapeuticos = () => {
               </div>
 
               {/* Seletor de variação */}
-              <div className="mt-7 p-5 md:p-6 rounded-2xl bg-white/60 border border-sais-sand">
+              <div className="mt-7 p-5 md:p-6 rounded-2xl bg-white/60 border border-sais-sand shadow-sais">
                 <p className="font-sans text-sm font-medium text-sais mb-3">Escolha a sua versão</p>
                 <div className="flex flex-col gap-3" role="radiogroup" aria-label="Versão do spray">
                   {variants.map((v) => {
@@ -390,7 +390,7 @@ const SpraysTerapeuticos = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-            <div className="bg-sais-cream rounded-3xl p-6 md:p-8 border border-sais-sand">
+            <div className="bg-sais-cream rounded-2xl p-6 md:p-8 border border-sais-sand shadow-sais">
               <h3 className="font-serif text-xl md:text-2xl font-semibold text-sais">
                 No Corpo e na Mente
               </h3>
@@ -412,7 +412,7 @@ const SpraysTerapeuticos = () => {
               </div>
             </div>
 
-            <div className="bg-sais-cream rounded-3xl p-6 md:p-8 border border-sais-sand">
+            <div className="bg-sais-cream rounded-2xl p-6 md:p-8 border border-sais-sand shadow-sais">
               <h3 className="font-serif text-xl md:text-2xl font-semibold text-sais">
                 No Campo Energético e Espiritual
               </h3>
@@ -451,7 +451,7 @@ const SpraysTerapeuticos = () => {
             {variantCards.map(({ icon: Icon, name, label, accent, ring, rows }) => (
               <article
                 key={name}
-                className="bg-white/60 rounded-3xl p-6 md:p-8 border border-sais-sand hover:shadow-sais transition-shadow duration-300"
+                className="bg-white/60 rounded-2xl p-6 md:p-8 border border-sais-sand shadow-sais transition-shadow duration-300"
               >
                 <div className={`w-12 h-12 rounded-full ${ring} flex items-center justify-center mb-4`}>
                   <Icon className={`w-6 h-6 ${accent}`} strokeWidth={1.6} />
@@ -492,7 +492,7 @@ const SpraysTerapeuticos = () => {
             {ritual.map(({ step, icon: Icon, title, text }) => (
               <article
                 key={step}
-                className="bg-sais-cream rounded-2xl p-6 md:p-7 border border-sais-sand"
+                className="bg-sais-cream rounded-2xl p-6 md:p-7 border border-sais-sand shadow-sais"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span className="w-11 h-11 rounded-full bg-sais/12 flex items-center justify-center">
@@ -556,7 +556,7 @@ const SpraysTerapeuticos = () => {
               loading="lazy"
               width={1024}
               height={1024}
-              className="w-full aspect-square object-contain bg-white/60 rounded-3xl shadow-sais"
+              className="w-full aspect-square object-contain bg-white/60 rounded-2xl border border-sais-sand shadow-sais"
             />
           </div>
         </div>
@@ -578,7 +578,7 @@ const SpraysTerapeuticos = () => {
             {specs.map((spec) => (
               <div
                 key={spec}
-                className="flex items-start gap-3 rounded-2xl bg-white/60 border border-sais-sand px-5 py-4"
+                className="flex items-start gap-3 rounded-2xl bg-white/60 border border-sais-sand shadow-sais px-5 py-4"
               >
                 <span className="shrink-0 w-8 h-8 rounded-full bg-sais-olive/12 flex items-center justify-center">
                   <Check className="w-4 h-4 text-sais-moss" strokeWidth={2.4} />
