@@ -44,14 +44,23 @@ const ProductsSection = () => {
                   <p className="text-muted-foreground font-sans text-sm leading-relaxed flex-1">
                     {product.description}
                   </p>
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-4 text-accent font-sans text-sm font-medium"
-                  >
-                    Saiba mais →
-                  </a>
+                  {product.pageUrl ? (
+                    <Link
+                      to={product.pageUrl}
+                      className="inline-block mt-4 text-accent font-sans text-sm font-medium hover:underline underline-offset-4"
+                    >
+                      Saiba mais →
+                    </Link>
+                  ) : (
+                    <a
+                      href={whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-4 text-accent font-sans text-sm font-medium hover:underline underline-offset-4"
+                    >
+                      Saiba mais →
+                    </a>
+                  )}
                 </div>
               </div>
             );
