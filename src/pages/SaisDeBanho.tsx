@@ -46,23 +46,28 @@ const galleryImages = [
 const benefits = [
   {
     icon: Droplets,
-    title: "Ação Relaxante",
-    text: "O sal marinho mineralizado alivia tensões musculares e o peso nas pernas após um dia longo.",
+    title: "Alívio Muscular & Desintoxicação",
+    text: "Os sais minerais — ricos em Magnésio e Sal Marinho — atuam por osmose no corpo, diminuindo a retenção de líquidos, relaxando as fibras musculares rígidas e aliviando dores e tensões acumuladas.",
   },
   {
     icon: Leaf,
-    title: "Fitoenergética Natural",
-    text: "Ervas e flores selecionadas (Camomila e Lavanda) para acalmar a mente agitada.",
+    title: "Melhora da Circulação Sanguínea",
+    text: "Combinados à água morna, os sais promovem a vasodilatação, estimulando o fluxo sanguíneo periférico e aliviando o cansaço extremo e o inchaço nas pernas e pés.",
   },
   {
     icon: Sparkles,
-    title: "Purificação Energética",
-    text: "Limpeza sutil do campo energético após um dia exaustivo, devolvendo leveza.",
+    title: "Esfoliação & Renovação Cutânea",
+    text: "A textura mineral realiza uma microesfoliação suave e natural, removendo impurezas e células mortas, deixando a pele macia, limpa e renovada.",
   },
   {
     icon: Flower2,
-    title: "Aromaterapia Suave",
-    text: "Óleos essenciais puros que atuam pelo olfato, reduzindo o estresse naturalmente.",
+    title: "Bem-Estar & Ação Neuro-Aromática",
+    text: "A evaporação dos óleos essenciais e das ervas (Camomila e Hortelã-Pimenta) viaja pelo sistema olfativo até o sistema límbico do cérebro, reduzindo o cortisol e induzindo ao sono profundo.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Ação Antisséptica e Pura",
+    text: "Formulação natural livre de sulfatos, parabenos ou fragrâncias sintéticas que irritam a pele — pura do ritual ao toque.",
   },
 ];
 
