@@ -51,6 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        cacao: {
+          DEFAULT: "hsl(var(--cacao))",
+          soft: "hsl(var(--cacao-soft))",
+          cream: "hsl(var(--cacao-cream))",
+          sand: "hsl(var(--cacao-sand))",
+          olive: "hsl(var(--cacao-olive))",
+          gold: "hsl(var(--cacao-gold))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -70,8 +78,13 @@ export default {
       boxShadow: {
         soft: "var(--shadow-soft)",
         card: "var(--shadow-card)",
+        cacao: "var(--shadow-cacao)",
       },
       keyframes: {
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -82,6 +95,7 @@ export default {
         },
       },
       animation: {
+        "fade-in": "fade-in 0.6s ease-out both",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
