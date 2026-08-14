@@ -8,6 +8,7 @@ import Index from "./pages/Index.tsx";
 
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 const CacauTherapy = lazy(() => import("./pages/CacauTherapy.tsx"));
+const AuricularTherapy = lazy(() => import("./pages/AuricularTherapy.tsx"));
 const TherapyDetail = lazy(() => import("./pages/TherapyDetail.tsx"));
 const IntegratedTherapies = lazy(() => import("./pages/IntegratedTherapies.tsx"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/terapias-integradas" element={<IntegratedTherapies />} />
             <Route path="/terapia/terapia-do-cacau" element={<CacauTherapy />} />
+            <Route path="/terapia/auriculoterapia" element={<AuricularTherapy />} />
             <Route path="/terapia/:slug" element={<TherapyDetail />} />
             <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
             <Route path="/politica-de-cookies" element={<CookiePolicy />} />
