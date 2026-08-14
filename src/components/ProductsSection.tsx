@@ -31,7 +31,7 @@ const ProductsSection = () => {
             Vitrine de Autocuidado
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-5 leading-tight">
-            Botica Terapêutica AlinhaMente 🌿✨
+            Botica Terapêutica AlinhaMente
           </h2>
           <p className="text-muted-foreground font-sans text-base md:text-lg leading-relaxed">
             Leve a experiência de relaxamento, alinhamento e cura do consultório
