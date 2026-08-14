@@ -31,6 +31,7 @@ const App = () => (
             <Route path="/terapia/terapia-do-cacau" element={<CacauTherapy />} />
             <Route path="/terapia/auriculoterapia" element={<AuricularTherapy />} />
             <Route path="/terapia/barras-de-access" element={<BarrasTherapy />} />
+            <Route path="/terapia/:slug" element={<TherapyDetail />} />
             <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
             <Route path="/politica-de-cookies" element={<CookiePolicy />} />
             <Route path="/termos-de-uso" element={<TermsOfUse />} />
