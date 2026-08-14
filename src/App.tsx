@@ -28,6 +28,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/terapias-integradas" element={<IntegratedTherapies />} />
             <Route path="/terapia/terapia-do-cacau" element={<CacauTherapy />} />
+            <Route path="/terapia/auriculoterapia" element={<AuricularTherapy />} />
             <Route path="/terapia/:slug" element={<TherapyDetail />} />
             <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
             <Route path="/politica-de-cookies" element={<CookiePolicy />} />
