@@ -78,6 +78,16 @@
     --gradient-reiki: linear-gradient(135deg, hsl(var(--reiki)) 0%, hsl(var(--reiki-soft)) 55%, hsl(var(--reiki-olive)) 100%);
     --shadow-reiki: 0 18px 50px -20px hsl(var(--reiki) / 0.35);
 
+    /* Sistemica palette (Autoconstelação Sistêmica) — terracota, bege, creme, oliva */
+    --sistemica: 20 34% 28%;
+    --sistemica-soft: 20 30% 44%;
+    --sistemica-cream: 36 40% 95%;
+    --sistemica-sand: 34 28% 87%;
+    --sistemica-olive: 82 18% 34%;
+    --sistemica-gold: 36 50% 52%;
+    --gradient-sistemica: linear-gradient(135deg, hsl(var(--sistemica)) 0%, hsl(var(--sistemica-soft)) 55%, hsl(var(--sistemica-olive)) 100%);
+    --shadow-sistemica: 0 18px 50px -20px hsl(var(--sistemica) / 0.35);
+
 
 
     --shadow-soft: 0 2px 20px -4px hsl(150 30% 12% / 0.08);
