@@ -46,23 +46,28 @@ const galleryImages = [
 const benefits = [
   {
     icon: Droplets,
-    title: "Ação Relaxante",
-    text: "O sal marinho mineralizado alivia tensões musculares e o peso nas pernas após um dia longo.",
+    title: "Alívio Muscular & Desintoxicação",
+    text: "Os sais minerais — ricos em Magnésio e Sal Marinho — atuam por osmose no corpo, diminuindo a retenção de líquidos, relaxando as fibras musculares rígidas e aliviando dores e tensões acumuladas.",
   },
   {
     icon: Leaf,
-    title: "Fitoenergética Natural",
-    text: "Ervas e flores selecionadas (Camomila e Lavanda) para acalmar a mente agitada.",
+    title: "Melhora da Circulação Sanguínea",
+    text: "Combinados à água morna, os sais promovem a vasodilatação, estimulando o fluxo sanguíneo periférico e aliviando o cansaço extremo e o inchaço nas pernas e pés.",
   },
   {
     icon: Sparkles,
-    title: "Purificação Energética",
-    text: "Limpeza sutil do campo energético após um dia exaustivo, devolvendo leveza.",
+    title: "Esfoliação & Renovação Cutânea",
+    text: "A textura mineral realiza uma microesfoliação suave e natural, removendo impurezas e células mortas, deixando a pele macia, limpa e renovada.",
   },
   {
     icon: Flower2,
-    title: "Aromaterapia Suave",
-    text: "Óleos essenciais puros que atuam pelo olfato, reduzindo o estresse naturalmente.",
+    title: "Bem-Estar & Ação Neuro-Aromática",
+    text: "A evaporação dos óleos essenciais e das ervas (Camomila e Hortelã-Pimenta) viaja pelo sistema olfativo até o sistema límbico do cérebro, reduzindo o cortisol e induzindo ao sono profundo.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Ação Antisséptica e Pura",
+    text: "Formulação natural livre de sulfatos, parabenos ou fragrâncias sintéticas que irritam a pele — pura do ritual ao toque.",
   },
 ];
 
@@ -70,43 +75,42 @@ const useModes = [
   {
     tag: "Opção 1",
     title: "Ritual de Escalda-Pés",
-    subtitle: "Para quem não tem banheira",
+    subtitle: "Alívio rápido das pernas e da mente",
     steps: [
-      "Prepare uma bacia com água morna numa temperatura agradável.",
-      "Adicione de 2 a 3 colheres de sopa dos Sais Terapêuticos.",
+      "Adicione de 2 a 3 colheres de sopa dos Sais em uma bacia com água morna (37°C a 38°C).",
       "Mergulhe os pés por 15 a 20 minutos.",
+      "Ideal antes de dormir para combater a insônia e descarregar o cansaço do dia.",
       "Respire fundo, feche os olhos e sinta o alívio imediato no corpo todo.",
     ],
   },
   {
     tag: "Opção 2",
-    title: "Banho de Imersão",
-    subtitle: "Banheira",
+    title: "Imersão em Banheira",
+    subtitle: "Experiência de SPA",
     steps: [
-      "Encha a banheira com água morna.",
-      "Adicione de 4 a 6 colheres de sopa dos Sais de Banho.",
-      "Permaneça em imersão por 20 minutos, desfrutando do aroma e das propriedades medicinais.",
+      "Adicione de 4 a 6 colheres de sopa dos Sais de Banho na banheira com água morna.",
+      "Permaneça em imersão por 20 minutos.",
+      "Permita a absorção dos minerais e o relaxamento muscular total.",
     ],
   },
   {
     tag: "Opção 3",
-    title: "Banho de Chuveiro",
-    subtitle: "Chuveiro Terapêutico",
+    title: "Chuveiro Terapêutico",
+    subtitle: "Para o dia a dia",
     steps: [
-      "Dissolva 2 colheres de sopa dos sais em um recipiente com 1 litro de água morna.",
-      "Após o seu banho convencional, jogue a mistura suavemente do pescoço para baixo.",
-      "Seque-se delicadamente com a toalha, mantendo a hidratação e o aroma.",
+      "Dissolva 2 colheres de sopa dos sais em 1 litro de água morna.",
+      "Após o banho habitual, jogue a mistura suavemente do pescoço para baixo.",
+      "Garanta o alívio das tensões e a ação aromática ao longo do corpo.",
     ],
   },
 ];
 
 const ingredients = [
-  "Sal Marinho Mineralizado",
-  "Bicarbonato de Sódio",
-  "Camomila desidratada",
-  "Pimenta-Menta desidratada",
-  "Pétalas de Flores",
-  "Óleos Essenciais Terapêuticos",
+  { name: "Sal Marinho Mineralizado", note: "Rico em micronutrientes que reponham minerais pela pele" },
+  { name: "Bicarbonato de Sódio", note: "Equilibra o pH da pele e potencializa a desintoxicação" },
+  { name: "Flores de Camomila Desidratadas", note: "Calmante natural de ação anti-inflamatória" },
+  { name: "Ervas Aromáticas", note: "Hortelã-Pimenta e pétalas com ação tonificante e relaxante" },
+  { name: "Óleos Essenciais Terapêuticos", note: "Puros, atuam no sistema límbico para reduzir o estresse" },
 ];
 
 const SIZE_LABEL = "Pote 150g";
@@ -195,11 +199,11 @@ const SaisDeBanho = () => {
                 Espaço AlinhaMente · Cascavel - PR
               </span>
               <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl leading-[1.18] font-semibold text-sais">
-                Sais de Banho Terapêuticos & Escalda-Pés: Purificação e Relaxamento
+                Sais de Banho & Escalda-Pés: A Ciência do Relaxamento e da Recuperação Corporal
               </h1>
               <p className="font-sans text-base md:text-lg text-sais/70 leading-relaxed mt-4">
-                Transforme o seu banho em um ritual de autocuidado. Alivie o cansaço do dia,
-                descarregue tensões acumuladas e recarregue suas energias.
+                Alívio muscular, estímulo à circulação e renovação da pele através da sinergia entre
+                fitoervas, minerais puros e aromaterapia.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -281,11 +285,11 @@ const SaisDeBanho = () => {
               Por que usar
             </span>
             <h2 className="font-serif text-2xl md:text-4xl font-semibold text-sais mt-3">
-              O Seu Ritual Diário de Desconexão e Cuidado
+              Como Este Produto Atua No Seu Corpo? (Benefícios Comprovados)
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {benefits.map(({ icon: Icon, title, text }) => (
               <article
                 key={title}
@@ -341,7 +345,7 @@ const SaisDeBanho = () => {
         </div>
       </section>
 
-      {/* Seção 4 — Composição natural */}
+      {/* Seção 4 — Composição transparente */}
       <section className="py-14 md:py-24" style={{ background: "var(--gradient-sais)" }}>
         <div className="max-w-4xl mx-auto px-5 sm:px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-8 md:mb-10">
@@ -349,23 +353,30 @@ const SaisDeBanho = () => {
               Transparência
             </span>
             <h2 className="font-serif text-2xl md:text-4xl font-semibold text-sais-cream mt-3">
-              O Que Há Dentro da Sua Embalagem?
+              Ingredientes Selecionados
             </h2>
           </div>
           <p className="font-sans text-base md:text-lg text-sais-cream/85 leading-relaxed text-center max-w-2xl mx-auto">
-            Mistura artesanal de Sal Marinho Mineralizado, Bicarbonato de Sódio, Ervas Desidratadas
-            (Camomila, Pimenta-Menta, Pétalas de Flores) e Óleos Essenciais Terapêuticos.
-            Livre de fragrâncias sintéticas pesadas.
+            Mistura artesanal livre de sulfatos, parabenos ou fragrâncias sintéticas — cada ingrediente
+            é escolhido pela sua ação fisiológica real sobre a pele, a circulação e o sistema nervoso.
           </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 grid sm:grid-cols-2 gap-4">
             {ingredients.map((ing) => (
-              <span
-                key={ing}
-                className="inline-flex items-center gap-2 rounded-full bg-sais-cream/15 border border-sais-cream/25 px-4 py-2 font-sans text-sm text-sais-cream"
+              <article
+                key={ing.name}
+                className="flex items-start gap-3 rounded-2xl bg-sais-cream/10 border border-sais-cream/20 px-5 py-4"
               >
-                <Leaf className="w-4 h-4 text-sais-gold" strokeWidth={1.6} /> {ing}
-              </span>
+                <span className="shrink-0 w-9 h-9 rounded-full bg-sais-gold/25 flex items-center justify-center">
+                  <Leaf className="w-5 h-5 text-sais-cream" strokeWidth={1.6} />
+                </span>
+                <div>
+                  <p className="font-sans text-sm font-semibold text-sais-cream">{ing.name}</p>
+                  <p className="font-sans text-xs text-sais-cream/75 leading-relaxed mt-0.5">
+                    {ing.note}
+                  </p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -409,7 +420,7 @@ const SaisDeBanho = () => {
             Leve para casa
           </span>
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-sais mt-3">
-            Leve a Experiência da AlinhaMente Para a Sua Casa
+            Leve a Ciência e o Cuidado da AlinhaMente Para a Sua Casa
           </h2>
           <p className="font-sans text-base md:text-lg text-sais/70 leading-relaxed mt-5 max-w-2xl mx-auto">
             Encomende agora seus Sais de Banho Terapêuticos & Escalda-Pés diretamente com a
