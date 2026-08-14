@@ -152,7 +152,7 @@ const CacauTherapy = () => {
                 Espaço AlinhaMente · Cascavel - PR
               </span>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] leading-[1.15] font-semibold text-cacao-cream">
-                Terapia do Cacau: Uma Jornada de Reconexão com o Coração 🌿💖
+                Terapia do Cacau: Uma Jornada de Reconexão com o Coração
               </h1>
               <p className="font-sans text-base md:text-lg text-cacao-cream/85 leading-relaxed mt-6 max-w-2xl">
                 Desacelere a mente, alivie o estresse e abra espaço para a cura emocional através de
@@ -237,7 +237,7 @@ const CacauTherapy = () => {
               Diferenciação
             </span>
             <h2 className="font-serif text-2xl md:text-4xl font-semibold text-cacao mt-3">
-              O Que Torna o Cacau Sagrado Tão Especial? ☕✨
+              O Que Torna o Cacau Sagrado Tão Especial?
             </h2>
           </div>
 
