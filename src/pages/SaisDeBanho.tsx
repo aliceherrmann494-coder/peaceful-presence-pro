@@ -345,7 +345,7 @@ const SaisDeBanho = () => {
         </div>
       </section>
 
-      {/* Seção 4 — Composição natural */}
+      {/* Seção 4 — Composição transparente */}
       <section className="py-14 md:py-24" style={{ background: "var(--gradient-sais)" }}>
         <div className="max-w-4xl mx-auto px-5 sm:px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-8 md:mb-10">
@@ -353,23 +353,30 @@ const SaisDeBanho = () => {
               Transparência
             </span>
             <h2 className="font-serif text-2xl md:text-4xl font-semibold text-sais-cream mt-3">
-              O Que Há Dentro da Sua Embalagem?
+              Ingredientes Selecionados
             </h2>
           </div>
           <p className="font-sans text-base md:text-lg text-sais-cream/85 leading-relaxed text-center max-w-2xl mx-auto">
-            Mistura artesanal de Sal Marinho Mineralizado, Bicarbonato de Sódio, Ervas Desidratadas
-            (Camomila, Pimenta-Menta, Pétalas de Flores) e Óleos Essenciais Terapêuticos.
-            Livre de fragrâncias sintéticas pesadas.
+            Mistura artesanal livre de sulfatos, parabenos ou fragrâncias sintéticas — cada ingrediente
+            é escolhido pela sua ação fisiológica real sobre a pele, a circulação e o sistema nervoso.
           </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="mt-8 grid sm:grid-cols-2 gap-4">
             {ingredients.map((ing) => (
-              <span
-                key={ing}
-                className="inline-flex items-center gap-2 rounded-full bg-sais-cream/15 border border-sais-cream/25 px-4 py-2 font-sans text-sm text-sais-cream"
+              <article
+                key={ing.name}
+                className="flex items-start gap-3 rounded-2xl bg-sais-cream/10 border border-sais-cream/20 px-5 py-4"
               >
-                <Leaf className="w-4 h-4 text-sais-gold" strokeWidth={1.6} /> {ing}
-              </span>
+                <span className="shrink-0 w-9 h-9 rounded-full bg-sais-gold/25 flex items-center justify-center">
+                  <Leaf className="w-5 h-5 text-sais-cream" strokeWidth={1.6} />
+                </span>
+                <div>
+                  <p className="font-sans text-sm font-semibold text-sais-cream">{ing.name}</p>
+                  <p className="font-sans text-xs text-sais-cream/75 leading-relaxed mt-0.5">
+                    {ing.note}
+                  </p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
