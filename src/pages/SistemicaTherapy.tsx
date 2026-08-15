@@ -184,10 +184,7 @@ const SistemicaTherapy = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-sistemica/85 via-sistemica/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-sistemica-cream/15 border border-sistemica-cream/30 flex items-center justify-center shrink-0">
-                    <Network className="w-6 h-6 text-sistemica-cream" strokeWidth={1.5} />
-                  </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
                   <p className="font-serif text-base md:text-lg text-sistemica-cream leading-snug">
                     As raízes que curam: olhe para a sua história com amor e ocupe o seu lugar.
                   </p>
