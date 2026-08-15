@@ -10,7 +10,6 @@ import {
   Bird,
   Compass,
   MapPin,
-  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
@@ -169,8 +168,8 @@ const SistemicaTherapy = () => {
                     Tire suas Dúvidas pelo WhatsApp
                   </Button>
                 </a>
-                <span className="font-sans text-sm text-sistemica-cream/75 inline-flex items-center gap-2">
-                  <Clock className="w-4 h-4" /> Sessões individuais e profundas
+                <span className="font-sans text-sm text-sistemica-cream/75 leading-snug">
+                  Sessões individuais e profundas
                 </span>
               </div>
             </div>
