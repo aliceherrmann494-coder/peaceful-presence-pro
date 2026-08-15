@@ -1,6 +1,6 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { Link } from "react-router-dom";
-import { ArrowRight, Leaf, Brain, Moon, Feather, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import portraitImg from "@/assets/juliana-bio.jpg";
 
 const WHATSAPP_NUMBER = "554599891066";
@@ -10,27 +10,22 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 
 const benefits = [
   {
-    icon: Leaf,
     title: "Escuta atenta e acolhimento humano",
     desc: "desde o primeiro minuto.",
   },
   {
-    icon: Brain,
     title: "Alívio do estresse e da ansiedade",
     desc: "com métodos suaves e comprovados.",
   },
   {
-    icon: Moon,
     title: "Melhora profunda do sono",
     desc: "e renovação da sua disposição diária.",
   },
   {
-    icon: Feather,
     title: "Clareza mental",
     desc: "para tomar decisões e superar bloqueios emocionais.",
   },
   {
-    icon: Sparkles,
     title: "Reconexão com a sua essência",
     desc: "e com o prazer de viver bem.",
   },
