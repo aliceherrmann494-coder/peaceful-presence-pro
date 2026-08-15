@@ -59,21 +59,6 @@ export const products: Product[] = [
     ],
     pageUrl: "/produto/sprays-terapeuticos",
   },
-  {
-    name: "Incensos Naturais",
-    slug: "incensos",
-    description:
-      "Incensos naturais para harmonização de ambientes, meditação e práticas terapêuticas, com aromas que elevam a vibração do espaço.",
-    shortDescription:
-      "Aromas puros para meditação, elevação vibracional e harmonização da casa.",
-    image: productIncense,
-    tag: "Purificação Aural",
-    tagTone: "neutro",
-    highlights: [
-      "100% resinas e ervas puras",
-      "Sem carvão ou químicos nocivos",
-    ],
-  },
 ];
 
 export const WHATSAPP_NUMBER = "554599891066";
