@@ -111,14 +111,11 @@ const BioSection = () => {
               O que você vai encontrar nos meus atendimentos
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 min-w-0">
-              {benefits.map(({ icon: Icon, title, desc }) => (
+              {benefits.map(({ title, desc }) => (
                 <div
                   key={title}
-                  className="flex items-start gap-3 rounded-xl bg-muted/40 border border-accent/20 p-4 min-w-0"
+                  className="rounded-xl bg-muted/40 border border-accent/20 p-4 min-w-0"
                 >
-                  <span className="flex-shrink-0 mt-0.5 text-accent">
-                    <Icon className="w-5 h-5" />
-                  </span>
                   <p className="text-sm md:text-base text-muted-foreground leading-snug min-w-0">
                     <strong className="text-foreground">{title}</strong>{" "}
                     {desc}
