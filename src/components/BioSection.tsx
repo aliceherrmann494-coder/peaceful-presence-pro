@@ -1,6 +1,6 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { Link } from "react-router-dom";
-import { ArrowRight, Leaf, Brain, Moon, Feather, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import portraitImg from "@/assets/juliana-bio.jpg";
 
 const WHATSAPP_NUMBER = "554599891066";
@@ -10,27 +10,22 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 
 const benefits = [
   {
-    icon: Leaf,
     title: "Escuta atenta e acolhimento humano",
     desc: "desde o primeiro minuto.",
   },
   {
-    icon: Brain,
     title: "Alívio do estresse e da ansiedade",
     desc: "com métodos suaves e comprovados.",
   },
   {
-    icon: Moon,
     title: "Melhora profunda do sono",
     desc: "e renovação da sua disposição diária.",
   },
   {
-    icon: Feather,
     title: "Clareza mental",
     desc: "para tomar decisões e superar bloqueios emocionais.",
   },
   {
-    icon: Sparkles,
     title: "Reconexão com a sua essência",
     desc: "e com o prazer de viver bem.",
   },
@@ -111,14 +106,11 @@ const BioSection = () => {
               O que você vai encontrar nos meus atendimentos
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 min-w-0">
-              {benefits.map(({ icon: Icon, title, desc }) => (
+              {benefits.map(({ title, desc }) => (
                 <div
                   key={title}
-                  className="flex items-start gap-3 rounded-xl bg-muted/40 border border-accent/20 p-4 min-w-0"
+                  className="rounded-xl bg-muted/40 border border-accent/20 p-4 min-w-0"
                 >
-                  <span className="flex-shrink-0 mt-0.5 text-accent">
-                    <Icon className="w-5 h-5" />
-                  </span>
                   <p className="text-sm md:text-base text-muted-foreground leading-snug min-w-0">
                     <strong className="text-foreground">{title}</strong>{" "}
                     {desc}
