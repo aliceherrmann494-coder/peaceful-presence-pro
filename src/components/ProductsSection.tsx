@@ -99,7 +99,7 @@ const ProductsSection = () => {
                       to={product.pageUrl}
                       className="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-lg bg-sais-olive px-4 py-3 text-center font-sans text-sm font-medium text-white hover:bg-sais transition-colors duration-300 shadow-sais"
                     >
-                      Ver Opções & Comprar
+                      Ver Opções
                     </Link>
                   ) : (
                     <a
@@ -108,7 +108,7 @@ const ProductsSection = () => {
                       rel="noopener noreferrer"
                       className="mt-auto inline-flex items-center justify-center gap-2 w-full rounded-lg bg-sais-olive px-4 py-3 text-center font-sans text-sm font-medium text-white hover:bg-sais transition-colors duration-300 shadow-sais"
                     >
-                      Ver Opções & Comprar
+                      Ver Opções
                     </a>
                   )}
                 </div>
