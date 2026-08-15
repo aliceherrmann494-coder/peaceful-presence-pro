@@ -10,7 +10,6 @@ import {
   Bird,
   Compass,
   MapPin,
-  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppScheduler } from "@/components/WhatsAppScheduler";
