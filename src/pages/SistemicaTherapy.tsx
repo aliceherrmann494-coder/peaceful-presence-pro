@@ -166,7 +166,7 @@ const SistemicaTherapy = () => {
                     className="w-full sm:w-auto bg-sistemica-gold hover:bg-sistemica-gold/90 text-sistemica font-sans font-medium px-8 py-6 text-base rounded-full shadow-sistemica"
                   >
                     <WhatsAppIcon className="w-5 h-5 mr-2" />
-                    Agendar Sessão no WhatsApp
+                    Tire suas Dúvidas pelo WhatsApp
                   </Button>
                 </a>
                 <span className="font-sans text-sm text-sistemica-cream/75 inline-flex items-center gap-2">
