@@ -30,6 +30,7 @@ export const products: Product[] = [
     tag: "100% Vegetal & Artesanal",
     tagTone: "olive",
     highlights: ["Alívio do estresse no banho", "Livre de sulfatos e parabenos"],
+    pageUrl: "/produto/sabonetes-terapeuticos",
   },
   {
     name: "Sais de Banho & Escalda-Pés",
