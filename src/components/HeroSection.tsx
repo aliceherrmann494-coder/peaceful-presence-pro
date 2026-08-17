@@ -38,7 +38,7 @@ const HeroSection = () => {
 
       <nav className="relative z-20 flex items-center justify-between gap-3 px-5 sm:px-6 lg:px-16 py-5 md:py-6">
         <span className="font-serif text-lg sm:text-xl font-semibold text-foreground tracking-wide min-w-0 truncate">
-          Juliana Corrêa Terapeuta
+          Juliana Moço Corrêa
         </span>
         <ul className="hidden lg:flex gap-8 shrink-0">
           {navLinks.map((link) => (

@@ -95,7 +95,7 @@ const ingredients = [
   { name: "Óleos Essenciais Doterra Terapêuticos", note: "Puros, atuam no sistema límbico para reduzir o estresse" },
 ];
 
-const SIZE_LABEL = "Pote 150g";
+const SIZE_LABEL = "Embalagem 150g";
 const PRICE = "R$ 29,90";
 
 const parsePrice = (price: string) =>
