@@ -5,7 +5,7 @@ const SpaceSection = () => {
   const ref = useFadeIn();
 
   return (
-    <section id="espaco" className="py-24 px-6 md:px-16">
+    <section id="espaco" className="py-14 md:py-24 px-5 sm:px-6 lg:px-16">
       <div ref={ref} className="fade-in-section max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">

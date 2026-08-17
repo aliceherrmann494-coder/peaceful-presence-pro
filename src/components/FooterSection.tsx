@@ -1,10 +1,14 @@
 import { Instagram, Facebook, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const WHATSAPP_FLOAT_LINK = `https://wa.me/554599891066?text=${encodeURIComponent(
+  "Olá, Juliana! Vim pelo site da AlinhaMente e gostaria de conversar com você. Estou aberta a um atendimento que me ajude a cuidar de mim com mais presença e leveza.",
+)}`;
+
 const FooterSection = () => {
   return (
     <>
-      <footer id="contato" className="bg-primary text-primary-foreground py-20 px-6 md:px-16">
+      <footer id="contato" className="bg-primary text-primary-foreground py-14 md:py-20 px-5 sm:px-6 lg:px-16">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
@@ -22,9 +26,9 @@ const FooterSection = () => {
                 <Phone className="w-4 h-4" />
                 (45) 9989-1066
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4" />
-                julianacorrea.jmc@gmail.com
+              <li className="flex items-start gap-3 min-w-0">
+                <Mail className="w-4 h-4 mt-0.5 shrink-0" />
+                <span className="break-all">julianacorrea.jmc@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
@@ -55,7 +59,7 @@ const FooterSection = () => {
           <iframe
             src="https://www.google.com/maps?q=R.+Rodrigues+Alves,+1450+-+Maria+Lu%C3%ADza,+Cascavel+-+PR,+85803-690&output=embed"
             width="100%"
-            height="300"
+            height="240"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
@@ -113,7 +117,7 @@ const FooterSection = () => {
 
       {/* WhatsApp Float */}
       <a
-        href="https://wa.me/554599891066"
+        href={WHATSAPP_FLOAT_LINK}
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"

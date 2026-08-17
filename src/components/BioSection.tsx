@@ -35,7 +35,7 @@ const BioSection = () => {
   const ref = useFadeIn();
 
   return (
-    <section id="sobre" className="py-24 px-6 md:px-16">
+    <section id="sobre" className="py-14 md:py-24 px-5 sm:px-6 lg:px-16">
       <div
         ref={ref}
         className="fade-in-section max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start"

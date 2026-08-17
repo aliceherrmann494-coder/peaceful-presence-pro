@@ -1,7 +1,7 @@
 import productSoap from "@/assets/product-soap.jpg";
 import productBathSalts from "@/assets/sais-de-banho.jpg";
 import productIncense from "@/assets/product-incense.jpg";
-import productSprays from "@/assets/sprays-duo-real.jpg";
+import productSprays from "@/assets/sprays-trio.png";
 
 export type TagTone = "olive" | "gold" | "destaque" | "neutro";
 
@@ -11,6 +11,7 @@ export interface Product {
   description: string;
   shortDescription: string;
   image: string;
+  imageFit?: "contain" | "cover";
   tag: string;
   tagTone: TagTone;
   highlights: string[];
@@ -44,17 +45,18 @@ export const products: Product[] = [
     pageUrl: "/produto/sais-de-banho",
   },
   {
-    name: "Sprays Terapêuticos (100ml)",
+    name: "Sprays Terapêuticos (60ml)",
     slug: "sprays-terapeuticos",
     description:
-      "Sprays aromatizadores e fitoenergéticos em frasco de vidro âmbar 100ml, nas versões Atenção/Foco e Equilíbrio, para alinhar emoções e harmonizar ambientes.",
+      "Sprays aromatizadores e fitoenergéticos em frasco de vidro âmbar 60ml, nas versões Harmonia, Atenção/Foco e Equilíbrio, para alinhar emoções, clarear a mente e harmonizar ambientes.",
     shortDescription:
-      "Sinergia fitoenergética para alinhar emoções e blindar o ambiente.",
+      "Harmonia, Foco e Equilíbrio: sinergia fitoenergética para o ritual diário.",
     image: productSprays,
+    imageFit: "cover",
     tag: "Mais Vendido",
     tagTone: "destaque",
     highlights: [
-      "Foco mental e alívio do estresse",
+      "Harmonia, Foco e Equilíbrio",
       "Ação no Sistema Límbico",
     ],
     pageUrl: "/produto/sprays-terapeuticos",

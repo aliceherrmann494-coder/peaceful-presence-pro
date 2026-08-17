@@ -23,7 +23,7 @@ const ProductsSection = () => {
   )}`;
 
   return (
-    <section id="produtos" className="py-20 md:py-28 px-6 md:px-16 bg-background">
+    <section id="produtos" className="py-14 md:py-24 lg:py-28 px-5 sm:px-6 lg:px-16 bg-background">
       <div ref={ref} className="fade-in-section max-w-7xl mx-auto">
         {/* Cabeçalho */}
         <div className="text-center mb-14 max-w-3xl mx-auto">
@@ -40,7 +40,7 @@ const ProductsSection = () => {
         </div>
 
         {/* Grid de produtos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-6 items-stretch">
           {products.map((product) => {
             const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
               `Olá Juliana! Tenho interesse em: ${product.name}. Pode me passar as opções e valores?`
@@ -52,7 +52,7 @@ const ProductsSection = () => {
                 className="group flex h-full flex-col bg-card rounded-2xl border border-sais-sand shadow-sais hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
                 {/* Imagem + tag */}
-                <div className="relative aspect-[4/3] sm:aspect-square bg-muted/40 flex items-center justify-center p-6">
+                <div className={`relative aspect-[4/3] sm:aspect-square bg-muted/40 flex items-center justify-center overflow-hidden ${product.imageFit === "cover" ? "" : "p-6"}`}>
                   <img
                     src={product.image}
                     alt={product.name}
@@ -60,7 +60,7 @@ const ProductsSection = () => {
                     decoding="async"
                     width={768}
                     height={768}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${product.imageFit === "cover" ? "object-cover" : "object-contain"}`}
                   />
                   <span
                     className={`absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-sans font-medium leading-tight max-w-[calc(100%-1rem)] ${tagToneClasses[product.tagTone]}`}
@@ -127,7 +127,7 @@ const ProductsSection = () => {
             href={kitWhatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-sais-olive/40 bg-white px-5 py-3 font-sans text-sm font-medium text-sais hover:bg-sais-olive/10 transition-colors duration-300 shadow-sm whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-sais-olive/40 bg-white px-5 py-3 font-sans text-sm font-medium text-sais hover:bg-sais-olive/10 transition-colors duration-300 shadow-sm w-full sm:w-auto"
           >
             <WhatsAppIcon className="w-4 h-4 text-sais-olive" />
             Falar com a Juliana no WhatsApp

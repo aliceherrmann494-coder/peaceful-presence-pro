@@ -131,8 +131,21 @@
     @apply border-border;
   }
 
+  html {
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -182,4 +195,13 @@
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 28px -4px hsl(140 60% 35% / 0.5);
+}
+
+@media (max-width: 767px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    right: 1rem;
+  }
 }

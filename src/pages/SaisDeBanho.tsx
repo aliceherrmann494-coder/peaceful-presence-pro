@@ -4,10 +4,7 @@ import { useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
-  Droplets,
   Leaf,
-  Sparkles,
-  Flower2,
   Gift,
   Check,
   ShieldCheck,
@@ -18,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import saisImg from "@/assets/sais-de-banho.jpg";
 import saisTextura from "@/assets/sais-textura.jpg";
 import saisEscalda from "@/assets/sais-escalda-ps.jpg";
+import saisKitPresente from "@/assets/sais-kit-presente.png";
 
 
 
@@ -44,27 +42,22 @@ const galleryImages = [
 
 const benefits = [
   {
-    icon: Droplets,
     title: "Alívio Muscular & Desintoxicação",
     text: "Os sais minerais — ricos em Magnésio e Sal Marinho — atuam por osmose no corpo, diminuindo a retenção de líquidos, relaxando as fibras musculares rígidas e aliviando dores e tensões acumuladas.",
   },
   {
-    icon: Leaf,
     title: "Melhora da Circulação Sanguínea",
     text: "Combinados à água morna, os sais promovem a vasodilatação, estimulando o fluxo sanguíneo periférico e aliviando o cansaço extremo e o inchaço nas pernas e pés.",
   },
   {
-    icon: Sparkles,
     title: "Esfoliação & Renovação Cutânea",
     text: "A textura mineral realiza uma microesfoliação suave e natural, removendo impurezas e células mortas, deixando a pele macia, limpa e renovada.",
   },
   {
-    icon: Flower2,
     title: "Bem-Estar & Ação Neuro-Aromática",
     text: "A evaporação dos óleos essenciais e das ervas (Camomila e Hortelã-Pimenta) viaja pelo sistema olfativo até o sistema límbico do cérebro, reduzindo o cortisol e induzindo ao sono profundo.",
   },
   {
-    icon: ShieldCheck,
     title: "Ação Antisséptica e Pura",
     text: "Formulação natural livre de sulfatos, parabenos ou fragrâncias sintéticas que irritam a pele — pura do ritual ao toque.",
   },
@@ -92,16 +85,6 @@ const useModes = [
       "Permita a absorção dos minerais e o relaxamento muscular total.",
     ],
   },
-  {
-    tag: "Opção 3",
-    title: "Chuveiro Terapêutico",
-    subtitle: "Para o dia a dia",
-    steps: [
-      "Dissolva 2 colheres de sopa dos sais em 1 litro de água morna.",
-      "Após o banho habitual, jogue a mistura suavemente do pescoço para baixo.",
-      "Garanta o alívio das tensões e a ação aromática ao longo do corpo.",
-    ],
-  },
 ];
 
 const ingredients = [
@@ -109,19 +92,31 @@ const ingredients = [
   { name: "Bicarbonato de Sódio", note: "Equilibra o pH da pele e potencializa a desintoxicação" },
   { name: "Flores de Camomila Desidratadas", note: "Calmante natural de ação anti-inflamatória" },
   { name: "Ervas Aromáticas", note: "Hortelã-Pimenta e pétalas com ação tonificante e relaxante" },
-  { name: "Óleos Essenciais Terapêuticos", note: "Puros, atuam no sistema límbico para reduzir o estresse" },
+  { name: "Óleos Essenciais Doterra Terapêuticos", note: "Puros, atuam no sistema límbico para reduzir o estresse" },
 ];
 
 const SIZE_LABEL = "Pote 150g";
 const PRICE = "R$ 29,90";
 
+const parsePrice = (price: string) =>
+  Number(price.replace(/[^\d,]/g, "").replace(",", "."));
+
+const formatPrice = (value: number) =>
+  value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
 const SaisDeBanho = () => {
   const [activeImg, setActiveImg] = useState(0);
   const [qty, setQty] = useState(1);
 
+  const unitValue = parsePrice(PRICE);
+  const totalValue = unitValue * qty;
+  const totalPrice = formatPrice(totalValue);
+
   const buildUrl = (intro: string) =>
     `https://wa.me/554599891066?text=${encodeURIComponent(
-      `${intro}\n\n• Tamanho: ${SIZE_LABEL}\n• Valor: ${PRICE}\n• Quantidade: ${qty} ${qty > 1 ? "unidades" : "unidade"}`,
+      `${intro}\n\n• Tamanho: ${SIZE_LABEL}\n• Valor unitário: ${PRICE}\n• Quantidade: ${qty} ${
+        qty > 1 ? "unidades" : "unidade"
+      }\n• Total: ${totalPrice}`,
     )}`;
 
   const orderUrl = buildUrl("Olá! Gostaria de encomendar os Sais de Banho Terapêuticos.");
@@ -144,7 +139,7 @@ const SaisDeBanho = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-sais-cream animate-fade-in">
+    <main className="min-h-screen bg-sais-cream animate-fade-in overflow-x-hidden">
       {/* Seção 1 — Hero / Destaque do produto */}
       <section className="relative overflow-hidden bg-sais-cream">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 md:px-12 pt-8 pb-12 md:pt-12 md:pb-20">
@@ -206,9 +201,6 @@ const SaisDeBanho = () => {
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <span className="inline-flex items-center gap-2 rounded-full bg-sais-sand px-4 py-2 text-sm font-sans text-sais font-medium">
-                  <Gift className="w-4 h-4" /> Sob encomenda
-                </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-sais-olive/10 px-4 py-2 text-sm font-sans text-sais-moss font-medium">
                   <Leaf className="w-4 h-4" /> 100% natural
                 </span>
@@ -220,7 +212,8 @@ const SaisDeBanho = () => {
               <div className="mt-7 p-5 md:p-6 rounded-2xl bg-white/60 border border-sais-sand shadow-sais">
                 <p className="font-sans text-sm text-sais/60 mb-1">Valor de investimento</p>
                 <p className="font-serif text-2xl md:text-3xl font-semibold text-sais">
-                  {PRICE} <span className="text-base font-sans font-normal text-sais/60">· {SIZE_LABEL}</span>
+                  {totalPrice}{" "}
+                  <span className="text-base font-sans font-normal text-sais/60">· {SIZE_LABEL}</span>
                 </p>
                 <p className="font-sans text-sm text-sais/60 mt-1">
                   Encomenda personalizada com a terapeuta Juliana Corrêa.
@@ -228,7 +221,14 @@ const SaisDeBanho = () => {
 
                 {/* Quantidade */}
                 <div className="mt-6 flex items-center justify-between gap-4">
-                  <p className="font-sans text-sm font-medium text-sais">Quantidade</p>
+                  <div>
+                    <p className="font-sans text-sm font-medium text-sais">Quantidade</p>
+                    {qty > 1 && (
+                      <p className="font-sans text-xs text-sais/60 mt-1" aria-live="polite">
+                        {PRICE} × {qty} = {totalPrice}
+                      </p>
+                    )}
+                  </div>
                   <div className="flex items-center gap-1 rounded-full border border-sais-sand bg-white/70 p-1">
                     <button
                       type="button"
@@ -289,14 +289,11 @@ const SaisDeBanho = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {benefits.map(({ icon: Icon, title, text }) => (
+            {benefits.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-sais-cream rounded-2xl p-6 border border-sais-sand shadow-sais transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-sais/12 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-sais" strokeWidth={1.5} />
-                </div>
                 <h3 className="font-serif text-lg font-semibold text-sais mb-2">{title}</h3>
                 <p className="font-sans text-sm text-sais/70 leading-relaxed">{text}</p>
               </article>
@@ -317,7 +314,7 @@ const SaisDeBanho = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
             {useModes.map((mode) => (
               <article
                 key={mode.title}
@@ -364,17 +361,12 @@ const SaisDeBanho = () => {
             {ingredients.map((ing) => (
               <article
                 key={ing.name}
-                className="flex items-start gap-3 rounded-2xl bg-sais-cream/10 border border-sais-cream/20 px-5 py-4"
+                className="rounded-2xl bg-sais-cream/10 border border-sais-cream/20 px-5 py-4"
               >
-                <span className="shrink-0 w-9 h-9 rounded-full bg-sais-gold/25 flex items-center justify-center">
-                  <Leaf className="w-5 h-5 text-sais-cream" strokeWidth={1.6} />
-                </span>
-                <div>
-                  <p className="font-sans text-sm font-semibold text-sais-cream">{ing.name}</p>
-                  <p className="font-sans text-xs text-sais-cream/75 leading-relaxed mt-0.5">
-                    {ing.note}
-                  </p>
-                </div>
+                <p className="font-sans text-sm font-semibold text-sais-cream">{ing.name}</p>
+                <p className="font-sans text-xs text-sais-cream/75 leading-relaxed mt-0.5">
+                  {ing.note}
+                </p>
               </article>
             ))}
           </div>
@@ -386,10 +378,10 @@ const SaisDeBanho = () => {
         <div className="max-w-4xl mx-auto px-5 sm:px-6 md:px-12">
           <article className="bg-sais-cream rounded-2xl p-8 md:p-12 border border-sais-sand shadow-sais grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-8 items-center">
             <img
-              src={saisEscalda}
-              alt="Ritual de escalda-pés com sais de banho terapêuticos em bacia de madeira"
+              src={saisKitPresente}
+              alt="Kit de presente com sais de banho terapêuticos, caixa de madeira personalizada e óleos essenciais"
               loading="lazy"
-              className="w-full aspect-square object-contain bg-white/60 rounded-2xl border border-sais-sand shadow-sais"
+              className="w-full aspect-square object-cover bg-white/60 rounded-2xl border border-sais-sand shadow-sais"
             />
 
             <div>

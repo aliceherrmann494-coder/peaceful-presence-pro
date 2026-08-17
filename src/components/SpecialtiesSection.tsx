@@ -41,7 +41,7 @@ const SpecialtiesSection = () => {
   const ref = useFadeIn();
 
   return (
-    <section id="terapias" className="py-24 px-6 md:px-16 bg-secondary/50">
+    <section id="terapias" className="py-14 md:py-24 px-5 sm:px-6 lg:px-16 bg-secondary/50">
       <div ref={ref} className="fade-in-section max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-4">
@@ -57,7 +57,7 @@ const SpecialtiesSection = () => {
             <Link
               to={`/terapia/${item.slug}`}
               key={item.title}
-              className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group"
+              className="bg-card p-6 sm:p-8 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group"
             >
               {item.image ? (
                 <img src={item.image} alt={`Ícone de ${item.title}`} className="w-12 h-12 object-contain mb-4" loading="lazy" />
