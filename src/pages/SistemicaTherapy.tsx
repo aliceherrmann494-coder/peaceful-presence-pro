@@ -3,12 +3,6 @@ import { useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
-  Network,
-  Sparkles,
-  HeartHandshake,
-  Coins,
-  Bird,
-  Compass,
   MapPin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import sistemicaImg from "@/assets/therapy-sistemica.jpg";
+import sistemicaImg from "@/assets/therapy-sistemica-sessao.png";
 
 const WHATSAPP_URL =
   "https://wa.me/554599891066?text=Ol%C3%A1%2C%20Juliana!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Autoconstela%C3%A7%C3%A3o%20Sist%C3%AAmica.";
@@ -32,17 +26,14 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 const howItWorks = [
   {
-    icon: Network,
     title: "As Leis Sistêmicas",
     text: "Baseada nos princípios do pertencimento, hierarquia e equilíbrio entre dar e tomar, que regem todo sistema familiar.",
   },
   {
-    icon: Sparkles,
     title: "Tomada de Consciência",
     text: "Você aprende a mapear o seu próprio campo e perceber quais papéis ou dores familiares está assumindo sem perceber.",
   },
   {
-    icon: HeartHandshake,
     title: "Movimento de Cura",
     text: "Ao dar um novo lugar aos fatos e às pessoas no seu coração, o bloqueio se desfaz e a vida volta a fluir para frente.",
   },
@@ -50,27 +41,22 @@ const howItWorks = [
 
 const benefits = [
   {
-    icon: Network,
     title: "Cura de Padrões Familiares",
     text: "Liberação de lealdades invisíveis a dores, escassez ou fracassos dos seus antepassados.",
   },
   {
-    icon: HeartHandshake,
     title: "Relacionamentos Mais Saudáveis",
     text: "Fim da repetição de dinâmicas tóxicas, dependência ou rejeição no amor.",
   },
   {
-    icon: Coins,
     title: "Desbloqueio da Prosperidade",
     text: "Restabelecimento do fluxo financeiro e do sucesso profissional ao alinhar sua postura com a vida.",
   },
   {
-    icon: Bird,
     title: "Alívio da Carga Emocional",
     text: "Resgate da sua autonomia, deixando ir o peso que pertence aos outros.",
   },
   {
-    icon: Compass,
     title: "Clareza para Tomada de Decisão",
     text: "Compreensão profunda sobre qual caminho seguir com firmeza e paz interior.",
   },
@@ -131,7 +117,7 @@ const SistemicaTherapy = () => {
         <div className="absolute inset-0">
           <img
             src={sistemicaImg}
-            alt="Autoconstelação Sistêmica: árvore com raízes profundas simbolizando ancestralidade e pertencimento no Espaço AlinhaMente em Cascavel - PR"
+            alt="Sessão de Autoconstelação Sistêmica no Espaço AlinhaMente em Cascavel - PR"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-sistemica/85" />
@@ -178,8 +164,8 @@ const SistemicaTherapy = () => {
               <div className="relative">
                 <img
                   src={sistemicaImg}
-                  alt="Ilustração de árvore com raízes representando o sistema familiar e a cura sistêmica"
-                  className="w-full h-72 sm:h-96 lg:h-[30rem] object-cover"
+                  alt="Sessão de constelação sistêmica com figuras de madeira sobre o tabuleiro, em atendimento na AlinhaMente"
+                  className="w-full h-80 sm:h-[28rem] lg:h-[32rem] object-cover object-[center_40%]"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-sistemica/85 via-sistemica/10 to-transparent" />
@@ -197,9 +183,6 @@ const SistemicaTherapy = () => {
       {/* Seção 2 — Conexão emocional & a dor dos padrões repetitivos */}
       <section className="bg-sistemica-cream py-14 md:py-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-6 md:px-12 text-center">
-          <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-sistemica/10 flex items-center justify-center">
-            <Network className="w-7 h-7 text-sistemica" strokeWidth={1.5} />
-          </div>
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-sistemica leading-tight">
             Você sente que, por mais que se esforce, certos problemas insistem em se repetir?
           </h2>
@@ -232,14 +215,11 @@ const SistemicaTherapy = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {howItWorks.map(({ icon: Icon, title, text }) => (
+            {howItWorks.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-sistemica-cream rounded-2xl p-6 md:p-8 shadow-soft border border-sistemica-sand hover:shadow-sistemica transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-sistemica/12 flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6 text-sistemica" strokeWidth={1.5} />
-                </div>
                 <h3 className="font-serif text-xl font-semibold text-sistemica mb-3">{title}</h3>
                 <p className="font-sans text-sm md:text-base text-sistemica/70 leading-relaxed">
                   {text}
@@ -263,14 +243,11 @@ const SistemicaTherapy = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {benefits.map(({ icon: Icon, title, text }) => (
+            {benefits.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-sistemica-sand/40 rounded-2xl p-6 border border-sistemica-sand hover:bg-sistemica-sand/70 transition-colors duration-300"
               >
-                <div className="w-11 h-11 rounded-xl bg-sistemica-cream flex items-center justify-center mb-4 shadow-soft">
-                  <Icon className="w-5 h-5 text-sistemica-gold" strokeWidth={1.6} />
-                </div>
                 <h3 className="font-serif text-lg font-semibold text-sistemica mb-2">{title}</h3>
                 <p className="font-sans text-sm text-sistemica/70 leading-relaxed">{text}</p>
               </article>

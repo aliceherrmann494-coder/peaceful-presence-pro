@@ -3,14 +3,6 @@ import { useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
-  Brain,
-  Leaf,
-  Moon,
-  Bone,
-  Scale,
-  Ear,
-  Sparkles,
-  Zap,
   MapPin,
   Clock,
 } from "lucide-react";
@@ -22,7 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import auricularImg from "@/assets/therapy-auriculoterapia.jpg";
+import auricularSessao from "@/assets/therapy-auricular-sessao.png";
 import auricularIcon from "@/assets/icone-auricular.png";
 
 const WHATSAPP_URL =
@@ -36,17 +28,14 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 const howItWorks = [
   {
-    icon: Ear,
     title: "O Microssistema Auricular",
     text: "A orelha funciona como um mapa completo do corpo humano, contendo mais de 200 pontos reflexos ligados aos nossos órgãos e ao sistema nervoso.",
   },
   {
-    icon: Sparkles,
     title: "Estimulação Sem Dor",
     text: "O tratamento pode ser feito com sementes de mostarda, pequenos cristais ou microagulhas esferoterapêuticas totalmente indolores.",
   },
   {
-    icon: Zap,
     title: "Resposta Rápida",
     text: "Ao estimular esses pontos, o cérebro libera endorfina e serotonina — os analgésicos e relaxantes naturais do próprio organismo.",
   },
@@ -54,27 +43,22 @@ const howItWorks = [
 
 const indications = [
   {
-    icon: Brain,
     title: "Combate à Enxaqueca e Dores de Cabeça",
     text: "Alívio profundo de dores crônicas, enxaquecas tensionais e sinusite.",
   },
   {
-    icon: Leaf,
     title: "Alívio da Ansiedade e Estresse",
     text: "Acalma o sistema nervoso, reduzindo a sensação de aperto no peito e a agitação.",
   },
   {
-    icon: Moon,
     title: "Melhora da Qualidade do Sono",
     text: "Auxilia no combate à insônia, proporcionando noites de descanso reparador.",
   },
   {
-    icon: Bone,
     title: "Redução de Dores Físicas",
     text: "Eficaz contra dores na coluna, bruxismo, tensões nos ombros e articulações.",
   },
   {
-    icon: Scale,
     title: "Controle de Compulsões",
     text: "Auxilia no equilíbrio do apetite, compulsão por doces e ansiedade alimentar.",
   },
@@ -101,7 +85,7 @@ const steps = [
 
 const faq = [
   {
-    q: "Adoece ou dói para aplicar?",
+    q: "Adormece ou dói para aplicar?",
     a: "Não! A aplicação com sementes ou cristais é super suave, confortável e não invasiva.",
   },
   {
@@ -133,8 +117,8 @@ const AuricularTherapy = () => {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={auricularImg}
-            alt="Aplicação de acupuntura auricular no Espaço AlinhaMente"
+            src={auricularSessao}
+            alt="Sessão de acupuntura auricular no Espaço AlinhaMente em Cascavel - PR"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-cacao-olive/85" />
@@ -180,9 +164,9 @@ const AuricularTherapy = () => {
             <div className="rounded-3xl overflow-hidden shadow-cacao border border-cacao-cream/20">
               <div className="relative">
                 <img
-                  src={auricularImg}
-                  alt="Detalhe da aplicação de sementes e cristais nos pontos reflexos da orelha"
-                  className="w-full h-72 sm:h-96 lg:h-[30rem] object-cover"
+                  src={auricularSessao}
+                  alt="Aplicação de sementes auriculares nos pontos reflexos da orelha, em sessão na AlinhaMente"
+                  className="w-full h-80 sm:h-[28rem] lg:h-[32rem] object-cover object-[center_35%]"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-cacao/85 via-cacao/10 to-transparent" />
@@ -245,14 +229,11 @@ const AuricularTherapy = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {howItWorks.map(({ icon: Icon, title, text }) => (
+            {howItWorks.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-cacao-cream rounded-2xl p-6 md:p-8 shadow-soft border border-cacao-sand hover:shadow-cacao transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-cacao-olive/12 flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6 text-cacao-olive" strokeWidth={1.5} />
-                </div>
                 <h3 className="font-serif text-xl font-semibold text-cacao mb-3">{title}</h3>
                 <p className="font-sans text-sm md:text-base text-cacao/70 leading-relaxed">{text}</p>
               </article>
@@ -274,14 +255,11 @@ const AuricularTherapy = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {indications.map(({ icon: Icon, title, text }) => (
+            {indications.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-cacao-sand/40 rounded-2xl p-6 border border-cacao-sand hover:bg-cacao-sand/70 transition-colors duration-300"
               >
-                <div className="w-11 h-11 rounded-xl bg-cacao-cream flex items-center justify-center mb-4 shadow-soft">
-                  <Icon className="w-5 h-5 text-cacao-gold" strokeWidth={1.6} />
-                </div>
                 <h3 className="font-serif text-lg font-semibold text-cacao mb-2">{title}</h3>
                 <p className="font-sans text-sm text-cacao/70 leading-relaxed">{text}</p>
               </article>

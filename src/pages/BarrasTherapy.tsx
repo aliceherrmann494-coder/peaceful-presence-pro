@@ -4,12 +4,6 @@ import {
   ArrowLeft,
   ArrowRight,
   Brain,
-  Moon,
-  Sparkles,
-  BatteryCharging,
-  Wind,
-  Database,
-  HandHeart,
   MapPin,
   Clock,
 } from "lucide-react";
@@ -34,17 +28,14 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 const howItWorks = [
   {
-    icon: Database,
     title: "Limpeza de Arquivos",
     text: "Existem 32 pontos na cabeça que armazenam todas as ideias, pensamentos, crenças, emoções e atitudes que você acumulou ao longo da vida.",
   },
   {
-    icon: HandHeart,
     title: "Toque Suave",
     text: "Ao tocar suavemente esses pontos, as ondas cerebrais desaceleram (saindo do estado Beta para Alfa e Theta), permitindo a liberação do estresse retido.",
   },
   {
-    icon: Sparkles,
     title: "Mais Espaço e Leveza",
     text: "É o equivalente a deletar os \"arquivos pesados e ultrapassados\" do computador do seu cérebro, abrindo espaço para novas possibilidades e paz interior.",
   },
@@ -52,27 +43,22 @@ const howItWorks = [
 
 const benefits = [
   {
-    icon: Brain,
     title: "Alívio da Mente Acelerada",
     text: "Redução drástica da ansiedade, do excesso de pensamentos e do esgotamento emocional.",
   },
   {
-    icon: Moon,
     title: "Melhora Profunda do Sono",
     text: "Resgate de noites de sono reparadoras e tranquilas, sem a mente a mil por hora.",
   },
   {
-    icon: Wind,
     title: "Liberação de Crenças Limitantes",
     text: "Facilidade para superar medos, bloqueios com dinheiro, relacionamentos e autoaceitação.",
   },
   {
-    icon: BatteryCharging,
     title: "Renovação de Energia",
     text: "Sensação imediata de paz, clareza para tomada de decisões e leveza no corpo.",
   },
   {
-    icon: Sparkles,
     title: "Presença e Calma",
     text: "Diminuição da reatividade e da irritabilidade no dia a dia, presença real no agora.",
   },
@@ -201,9 +187,6 @@ const BarrasTherapy = () => {
       {/* Seção 2 — Conexão emocional & a dor da mente acelerada */}
       <section className="bg-access-cream py-14 md:py-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-6 md:px-12 text-center">
-          <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-access/10 flex items-center justify-center">
-            <Brain className="w-7 h-7 text-access" strokeWidth={1.5} />
-          </div>
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-access leading-tight">
             Você sente que a sua mente não para um segundo sequer?
           </h2>
@@ -235,14 +218,11 @@ const BarrasTherapy = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {howItWorks.map(({ icon: Icon, title, text }) => (
+            {howItWorks.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-access-cream rounded-2xl p-6 md:p-8 shadow-soft border border-access-sand hover:shadow-access transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-access/12 flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6 text-access" strokeWidth={1.5} />
-                </div>
                 <h3 className="font-serif text-xl font-semibold text-access mb-3">{title}</h3>
                 <p className="font-sans text-sm md:text-base text-access/70 leading-relaxed">{text}</p>
               </article>
@@ -264,14 +244,11 @@ const BarrasTherapy = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {benefits.map(({ icon: Icon, title, text }) => (
+            {benefits.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-access-sand/40 rounded-2xl p-6 border border-access-sand hover:bg-access-sand/70 transition-colors duration-300"
               >
-                <div className="w-11 h-11 rounded-xl bg-access-cream flex items-center justify-center mb-4 shadow-soft">
-                  <Icon className="w-5 h-5 text-access-soft" strokeWidth={1.6} />
-                </div>
                 <h3 className="font-serif text-lg font-semibold text-access mb-2">{title}</h3>
                 <p className="font-sans text-sm text-access/70 leading-relaxed">{text}</p>
               </article>

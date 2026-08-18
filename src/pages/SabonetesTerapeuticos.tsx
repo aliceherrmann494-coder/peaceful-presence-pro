@@ -183,10 +183,6 @@ const SabonetesTerapeuticos = () => {
                   className="w-full aspect-square object-cover object-center bg-white/60"
                 />
               </div>
-              <p className="font-sans text-xs text-sais/55 leading-relaxed">
-                Barras artesanais com ervas secas no topo, glicerina natural preservada e espuma cremosa
-                no banho.
-              </p>
             </div>
 
             <div>

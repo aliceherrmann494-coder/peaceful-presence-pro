@@ -3,13 +3,6 @@ import { useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
-  Leaf,
-  BatteryCharging,
-  Moon,
-  Sparkles,
-  Shield,
-  HandHeart,
-  Network,
   MapPin,
   Clock,
 } from "lucide-react";
@@ -21,7 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import reikiImg from "@/assets/therapy-reiki.jpg";
+import reikiImg from "@/assets/therapy-reiki-sessao.png";
 
 const WHATSAPP_URL =
   "https://wa.me/554599891066?text=Ol%C3%A1%2C%20Juliana!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Reiki.";
@@ -34,17 +27,14 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 const howItWorks = [
   {
-    icon: HandHeart,
     title: "Canalização Natural",
     text: "O Reiki não é uma religião nem dogmas; é a canalização da energia vital universal através das mãos da terapeuta para o cliente.",
   },
   {
-    icon: Network,
     title: "Alinhamento dos Chakras",
     text: "A energia atua diretamente nos centros energéticos (chakras), harmonizando órgãos, emoções e estados mentais.",
   },
   {
-    icon: Leaf,
     title: "Atuação Holística",
     text: "Trata o indivíduo de forma integral — corpo físico, mental, emocional e espiritual.",
   },
@@ -52,27 +42,22 @@ const howItWorks = [
 
 const benefits = [
   {
-    icon: Leaf,
     title: "Alívio do Estresse e Ansiedade",
     text: "Relaxamento muscular e desaceleração do ritmo cardíaco e mental.",
   },
   {
-    icon: BatteryCharging,
     title: "Recuperação da Vitalidade",
     text: "Combate ao cansaço físico e mental, trazendo uma sensação de \"bateria recarregada\".",
   },
   {
-    icon: Moon,
     title: "Sono Mais Tranquilo e Repousante",
     text: "Redução da insônia e melhoria significativa na qualidade do descanso diário.",
   },
   {
-    icon: Sparkles,
     title: "Clareza Emocional e Paz",
     text: "Ajuda a processar lutos, mágoas e sobrecargas emocionais com mais leveza.",
   },
   {
-    icon: Shield,
     title: "Fortalecimento do Sistema Imunológico",
     text: "Estimula a autocura do próprio organismo ao reduzir o cortisol (hormônio do estresse).",
   },
@@ -132,7 +117,7 @@ const ReikiTherapy = () => {
         <div className="absolute inset-0">
           <img
             src={reikiImg}
-            alt="Sessão de Reiki com imposição de mãos no Espaço AlinhaMente em Cascavel - PR"
+            alt="Sessão de Reiki com Juliana Moço Corrêa no Espaço AlinhaMente em Cascavel - PR"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-reiki/85" />
@@ -179,15 +164,12 @@ const ReikiTherapy = () => {
               <div className="relative">
                 <img
                   src={reikiImg}
-                  alt="Mãos sobrepostas suavemente aplicando a energia Reiki com luz e calor acolhedor"
-                  className="w-full h-72 sm:h-96 lg:h-[30rem] object-cover"
+                  alt="Juliana Moço Corrêa aplicando Reiki com as mãos sobre o campo energético do cliente"
+                  className="w-full h-80 sm:h-[28rem] lg:h-[32rem] object-cover object-[center_18%]"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-reiki/85 via-reiki/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-reiki-cream/15 border border-reiki-cream/30 flex items-center justify-center shrink-0">
-                    <HandHeart className="w-6 h-6 text-reiki-cream" strokeWidth={1.5} />
-                  </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
                   <p className="font-serif text-base md:text-lg text-reiki-cream leading-snug">
                     A energia vital que cura, acalma e revitaliza.
                   </p>
@@ -201,9 +183,6 @@ const ReikiTherapy = () => {
       {/* Seção 2 — Conexão emocional & a dor do cansaço energético */}
       <section className="bg-reiki-cream py-14 md:py-24">
         <div className="max-w-3xl mx-auto px-5 sm:px-6 md:px-12 text-center">
-          <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-reiki/10 flex items-center justify-center">
-            <Leaf className="w-7 h-7 text-reiki" strokeWidth={1.5} />
-          </div>
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-reiki leading-tight">
             Sente que suas energias estão completamente esgotadas?
           </h2>
@@ -236,14 +215,11 @@ const ReikiTherapy = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {howItWorks.map(({ icon: Icon, title, text }) => (
+            {howItWorks.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-reiki-cream rounded-2xl p-6 md:p-8 shadow-soft border border-reiki-sand hover:shadow-reiki transition-shadow duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-reiki/12 flex items-center justify-center mb-5">
-                  <Icon className="w-6 h-6 text-reiki" strokeWidth={1.5} />
-                </div>
                 <h3 className="font-serif text-xl font-semibold text-reiki mb-3">{title}</h3>
                 <p className="font-sans text-sm md:text-base text-reiki/70 leading-relaxed">{text}</p>
               </article>
@@ -265,14 +241,11 @@ const ReikiTherapy = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {benefits.map(({ icon: Icon, title, text }) => (
+            {benefits.map(({ title, text }) => (
               <article
                 key={title}
                 className="bg-reiki-sand/40 rounded-2xl p-6 border border-reiki-sand hover:bg-reiki-sand/70 transition-colors duration-300"
               >
-                <div className="w-11 h-11 rounded-xl bg-reiki-cream flex items-center justify-center mb-4 shadow-soft">
-                  <Icon className="w-5 h-5 text-reiki-gold" strokeWidth={1.6} />
-                </div>
                 <h3 className="font-serif text-lg font-semibold text-reiki mb-2">{title}</h3>
                 <p className="font-sans text-sm text-reiki/70 leading-relaxed">{text}</p>
               </article>

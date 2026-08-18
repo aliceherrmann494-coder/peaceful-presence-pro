@@ -1,7 +1,7 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import portraitImg from "@/assets/juliana-bio.jpg";
+import portraitImg from "@/assets/juliana-bio.png";
 
 const WHATSAPP_NUMBER = "554599891066";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -46,7 +46,7 @@ const BioSection = () => {
             <img
               src={portraitImg}
               alt="Juliana Moço Corrêa - Terapeuta Integrativa em Cascavel - PR"
-              className="w-full h-auto object-cover aspect-square"
+              className="w-full h-auto object-cover object-[center_20%] aspect-square"
               loading="lazy"
               width={800}
               height={800}
