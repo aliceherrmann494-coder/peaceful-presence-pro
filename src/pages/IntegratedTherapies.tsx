@@ -55,6 +55,8 @@ const IntegratedTherapies = () => {
           width={1920}
           height={1080}
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16">

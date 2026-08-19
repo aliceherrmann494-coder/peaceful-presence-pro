@@ -159,6 +159,9 @@ const SaisDeBanho = () => {
                   alt={galleryImages[activeImg].alt}
                   width={1024}
                   height={1024}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full aspect-square object-contain bg-white/60"
                 />
               </div>

@@ -185,7 +185,9 @@ const CacauTherapy = () => {
                     src={cacauImg}
                     alt="Ritual de cacau cerimonial no Espaço AlinhaMente"
                     className="w-full h-80 sm:h-96 lg:h-[34rem] object-cover"
-                    loading="lazy"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                     width={1024}
                     height={640}
                   />

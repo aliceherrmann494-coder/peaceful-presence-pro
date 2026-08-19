@@ -4,22 +4,23 @@ import { lazy, Suspense } from "react";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { lazyPage } from "@/lib/prefetch";
 import Index from "./pages/Index.tsx";
 
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
-const CacauTherapy = lazy(() => import("./pages/CacauTherapy.tsx"));
-const AuricularTherapy = lazy(() => import("./pages/AuricularTherapy.tsx"));
-const BarrasTherapy = lazy(() => import("./pages/BarrasTherapy.tsx"));
-const ReikiTherapy = lazy(() => import("./pages/ReikiTherapy.tsx"));
-const SistemicaTherapy = lazy(() => import("./pages/SistemicaTherapy.tsx"));
+const CacauTherapy = lazyPage("/terapia/terapia-do-cacau");
+const AuricularTherapy = lazyPage("/terapia/auriculoterapia");
+const BarrasTherapy = lazyPage("/terapia/barras-de-access");
+const ReikiTherapy = lazyPage("/terapia/reiki");
+const SistemicaTherapy = lazyPage("/terapia/autoconstelacao-sistemica");
 const TherapyDetail = lazy(() => import("./pages/TherapyDetail.tsx"));
-const IntegratedTherapies = lazy(() => import("./pages/IntegratedTherapies.tsx"));
+const IntegratedTherapies = lazyPage("/terapias-integradas");
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy.tsx"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy.tsx"));
 const TermsOfUse = lazy(() => import("./pages/TermsOfUse.tsx"));
-const SaisDeBanho = lazy(() => import("./pages/SaisDeBanho.tsx"));
-const SpraysTerapeuticos = lazy(() => import("./pages/SpraysTerapeuticos.tsx"));
-const SabonetesTerapeuticos = lazy(() => import("./pages/SabonetesTerapeuticos.tsx"));
+const SaisDeBanho = lazyPage("/produto/sais-de-banho");
+const SpraysTerapeuticos = lazyPage("/produto/sprays-terapeuticos");
+const SabonetesTerapeuticos = lazyPage("/produto/sabonetes-terapeuticos");
 
 const queryClient = new QueryClient();
 
@@ -29,7 +30,17 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Suspense fallback={<div className="min-h-screen bg-background" />}>
+          <Suspense
+            fallback={
+              <div
+                className="min-h-screen bg-background flex items-center justify-center"
+                aria-busy="true"
+                aria-live="polite"
+              >
+                <p className="font-sans text-sm tracking-wide text-muted-foreground">Carregando…</p>
+              </div>
+            }
+          >
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/terapias-integradas" element={<IntegratedTherapies />} />

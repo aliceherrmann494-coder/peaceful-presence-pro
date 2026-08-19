@@ -180,6 +180,9 @@ const SabonetesTerapeuticos = () => {
                   alt="Sabonetes terapêuticos artesanais da AlinhaMente, cortados à mão com ervas secas"
                   width={1024}
                   height={1024}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full aspect-square object-cover object-center bg-white/60"
                 />
               </div>

@@ -2,6 +2,7 @@ import { useFadeIn } from "@/hooks/useFadeIn";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import portraitImg from "@/assets/juliana-bio.png";
+import { prefetchPath } from "@/lib/prefetch";
 
 const WHATSAPP_NUMBER = "554599891066";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -132,6 +133,9 @@ const BioSection = () => {
             </a>
             <Link
               to="/terapias-integradas"
+              onMouseEnter={() => prefetchPath("/terapias-integradas")}
+              onFocus={() => prefetchPath("/terapias-integradas")}
+              onTouchStart={() => prefetchPath("/terapias-integradas")}
               className="inline-flex items-center gap-2 text-accent font-sans text-sm font-medium hover:gap-3 transition-all pt-2"
             >
               Conheça as Terapias Integradas <ArrowRight className="w-4 h-4" />

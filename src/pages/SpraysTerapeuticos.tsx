@@ -330,6 +330,9 @@ const SpraysTerapeuticos = () => {
                   alt={galleryImages[activeImg].alt}
                   width={1024}
                   height={1280}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full aspect-[4/5] object-contain object-center"
                 />
               </div>

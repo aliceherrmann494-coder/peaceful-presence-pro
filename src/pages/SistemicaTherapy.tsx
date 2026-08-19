@@ -166,7 +166,9 @@ const SistemicaTherapy = () => {
                   src={sistemicaImg}
                   alt="Sessão de constelação sistêmica com figuras de madeira sobre o tabuleiro, em atendimento na AlinhaMente"
                   className="w-full h-80 sm:h-[28rem] lg:h-[32rem] object-cover object-[center_40%]"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-sistemica/85 via-sistemica/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">

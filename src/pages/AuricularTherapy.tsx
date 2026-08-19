@@ -14,7 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import auricularSessao from "@/assets/therapy-auricular-sessao.png";
+import auricularSessao from "@/assets/therapy-auricular-sessao.jpg";
 import auricularIcon from "@/assets/icone-auricular.png";
 
 const WHATSAPP_URL =
@@ -167,7 +167,9 @@ const AuricularTherapy = () => {
                   src={auricularSessao}
                   alt="Aplicação de sementes auriculares nos pontos reflexos da orelha, em sessão na AlinhaMente"
                   className="w-full h-80 sm:h-[28rem] lg:h-[32rem] object-cover object-[center_35%]"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-cacao/85 via-cacao/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center gap-4">

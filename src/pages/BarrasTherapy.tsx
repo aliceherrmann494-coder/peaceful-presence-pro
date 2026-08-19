@@ -167,7 +167,9 @@ const BarrasTherapy = () => {
                   src={barrasImg}
                   alt="Toque suave nos 32 pontos da cabeça durante uma sessão de Barras de Access"
                   className="w-full h-72 sm:h-96 lg:h-[30rem] object-cover"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-access/85 via-access/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center gap-4">

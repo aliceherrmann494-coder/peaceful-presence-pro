@@ -166,7 +166,9 @@ const ReikiTherapy = () => {
                   src={reikiImg}
                   alt="Juliana Moço Corrêa aplicando Reiki com as mãos sobre o campo energético do cliente"
                   className="w-full h-80 sm:h-[28rem] lg:h-[32rem] object-cover object-[center_18%]"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-reiki/85 via-reiki/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">

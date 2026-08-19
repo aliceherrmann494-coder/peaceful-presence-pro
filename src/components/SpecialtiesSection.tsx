@@ -3,6 +3,7 @@ import { BrainCircuit, HandHeart, Network } from "lucide-react";
 import { Link } from "react-router-dom";
 import cacauIcon from "@/assets/icone-cacau.png";
 import auricularIcon from "@/assets/icone-auricular.png";
+import { prefetchPath } from "@/lib/prefetch";
 
 const specialties = [
   {
@@ -57,6 +58,9 @@ const SpecialtiesSection = () => {
             <Link
               to={`/terapia/${item.slug}`}
               key={item.title}
+              onMouseEnter={() => prefetchPath(`/terapia/${item.slug}`)}
+              onFocus={() => prefetchPath(`/terapia/${item.slug}`)}
+              onTouchStart={() => prefetchPath(`/terapia/${item.slug}`)}
               className="bg-card p-6 sm:p-8 rounded-2xl shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group"
             >
               {item.image ? (
