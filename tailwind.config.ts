@@ -1,0 +1,141 @@
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        serif: ["'Playfair Display'", "Georgia", "serif"],
+        sans: ["'Inter'", "system-ui", "sans-serif"],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        cacao: {
+          DEFAULT: "hsl(var(--cacao))",
+          soft: "hsl(var(--cacao-soft))",
+          cream: "hsl(var(--cacao-cream))",
+          sand: "hsl(var(--cacao-sand))",
+          olive: "hsl(var(--cacao-olive))",
+          gold: "hsl(var(--cacao-gold))",
+        },
+        access: {
+          DEFAULT: "hsl(var(--access))",
+          soft: "hsl(var(--access-soft))",
+          cream: "hsl(var(--access-cream))",
+          sand: "hsl(var(--access-sand))",
+          olive: "hsl(var(--access-olive))",
+          mist: "hsl(var(--access-mist))",
+        },
+        reiki: {
+          DEFAULT: "hsl(var(--reiki))",
+          soft: "hsl(var(--reiki-soft))",
+          cream: "hsl(var(--reiki-cream))",
+          sand: "hsl(var(--reiki-sand))",
+          olive: "hsl(var(--reiki-olive))",
+          gold: "hsl(var(--reiki-gold))",
+        },
+        sistemica: {
+          DEFAULT: "hsl(var(--sistemica))",
+          soft: "hsl(var(--sistemica-soft))",
+          cream: "hsl(var(--sistemica-cream))",
+          sand: "hsl(var(--sistemica-sand))",
+          olive: "hsl(var(--sistemica-olive))",
+          gold: "hsl(var(--sistemica-gold))",
+        },
+        sais: {
+          DEFAULT: "hsl(var(--sais))",
+          soft: "hsl(var(--sais-soft))",
+          cream: "hsl(var(--sais-cream))",
+          sand: "hsl(var(--sais-sand))",
+          olive: "hsl(var(--sais-olive))",
+          moss: "hsl(var(--sais-moss))",
+          gold: "hsl(var(--sais-gold))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        card: "var(--shadow-card)",
+        cacao: "var(--shadow-cacao)",
+        access: "var(--shadow-access)",
+        reiki: "var(--shadow-reiki)",
+        sistemica: "var(--shadow-sistemica)",
+      },
+      keyframes: {
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.6s ease-out both",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
